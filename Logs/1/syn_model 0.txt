@@ -1,0 +1,9 @@
+syn_model in iteration  0 :
+ #cur_locParam_0_0 = 0,
+ #cur_locParam_0_1 = 0,
+ #cur_locInput_0 = 0
+ cur_locInput_1 = 1,
+ 
+ cur_locReturn_0 = 2,
+ cur_locOutput = 0,
+ 
