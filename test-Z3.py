@@ -18,9 +18,9 @@ O = BitVec('O', 8)
 Os = [ BitVec('O%s' % o, 8) for o in range(8) ]
 
 ## Connecting input and output to their bits
-Input_Assertion = [I == Sum([Is[s]*2**s for s in range(8)])]
-Output_Assertion = [O == Sum([Os[s]*2**s for s in range(8)])]
-IO_Assertions = Input_Assertion + Output_Assertion
+Input_Assertion = I == Sum([Is[s]*2**s for s in range(8)])
+Output_Assertion = O == Sum([Os[s]*2**s for s in range(8)])
+IO_Assertions = And(Input_Assertion, Output_Assertion)
 
 # Setting well-formedness constraints
 
@@ -36,6 +36,8 @@ wfp_acyc = [
 
 ## Setting Other Constraints
 wfp_other = [
+    0 <= LI,
+    LI <= 0,
     0 <= L_I1p,
     L_I1p <= 2,
     0 <= L_I2p,
@@ -45,7 +47,9 @@ wfp_other = [
     1 <= L_O1p,
     L_O1p <= 2,
     1 <= L_O2p,
-    L_O2p <= 2
+    L_O2p <= 2,
+    1 <= LO,
+    LO <= 2
 ]
 
 ## Gathering all constraints above in one assertion term
@@ -87,76 +91,43 @@ spec = And(
     Implies(And(Is[7] == 1, Is[6] == 0, Is[5] == 0, Is[4] == 0, Is[3] == 0, Is[2] == 0, Is[1] == 0, Is[0] == 0)
             , And(Os[7] == 0, Os[6] == Is[6], Os[5] == Is[5], Os[4] == Is[4], Os[3] == Is[3], Os[2] == Is[2], Os[1] == Is[1], Os[0] == Is[0])),
     Implies(And(Is[6] == 1, Is[5] == 0, Is[4] == 0, Is[3] == 0, Is[2] == 0, Is[1] == 0, Is[0] == 0),
-             And(Os[6] == 0, Os[5] == Is[5], Os[4] == Is[4], Os[3] == Is[3], Os[2] == Is[2], Os[1] == Is[1], Os[0] == Is[0])),
+             And(Os[7] == Is[7], Os[6] == 0, Os[5] == Is[5], Os[4] == Is[4], Os[3] == Is[3], Os[2] == Is[2], Os[1] == Is[1], Os[0] == Is[0])),
     Implies(And(Is[5] == 1, Is[4] == 0, Is[3] == 0, Is[2] == 0, Is[1] == 0, Is[0] == 0),
-             And(Os[5] == 0, Os[4] == Is[4], Os[3] == Is[3], Os[2] == Is[2], Os[1] == Is[1], Os[0] == Is[0])),
+             And(Os[7] == Is[7], Os[6] == Is[6], Os[5] == 0, Os[4] == Is[4], Os[3] == Is[3], Os[2] == Is[2], Os[1] == Is[1], Os[0] == Is[0])),
     Implies(And(Is[4] == 1, Is[3] == 0, Is[2] == 0, Is[1] == 0, Is[0] == 0),
-             And(Os[4] == 0, Os[3] == Is[3], Os[2] == Is[2], Os[1] == Is[1], Os[0] == Is[0])),
+             And(Os[7] == Is[7], Os[6] == Is[6], Os[5] == Is[5], Os[4] == 0, Os[3] == Is[3], Os[2] == Is[2], Os[1] == Is[1], Os[0] == Is[0])),
     Implies(And(Is[3] == 1, Is[2] == 0, Is[1] == 0, Is[0] == 0),
-             And(Os[3] == 0, Os[2] == Is[2], Os[1] == Is[1], Os[0] == Is[0])),
+             And(Os[7] == Is[7], Os[6] == Is[6], Os[5] == Is[5], Os[4] == Is[4], Os[3] == 0, Os[2] == Is[2], Os[1] == Is[1], Os[0] == Is[0])),
     Implies(And(Is[2] == 1, Is[1] == 0, Is[0] == 0),
-             And(Os[2] == 0, Os[1] == Is[1], Os[0] == Is[0])),
+             And(Os[7] == Is[7], Os[6] == Is[6], Os[5] == Is[5], Os[4] == Is[4], Os[3] == Is[3], Os[2] == 0, Os[1] == Is[1], Os[0] == Is[0])),
     Implies(And(Is[1] == 1, Is[0] == 0),
-             And(Os[1] == 0, Os[0] == Is[0])),
-    Implies(Is[0] == 1, Os[0] == 0)
+             And(Os[7] == Is[7], Os[6] == Is[6], Os[5] == Is[5], Os[4] == Is[4], Os[3] == Is[3], Os[2] == Is[2], Os[1] == 0, Os[0] == Is[0])),
+    Implies(Is[0] == 1, And(Os[7] == Is[7], Os[6] == Is[6], Os[5] == Is[5], Os[4] == Is[4], Os[3] == Is[3], Os[2] == Is[2], Os[1] == Is[1], Os[0] == 0))
 )
 
 # Some other constraints on input bits
-Icons = [And(Or(Is[s] == 0, Is[s] == 1)) for s in range(8)]
-Ocons = [And(Or(Os[s] == 0, Os[s] == 1)) for s in range(8)]
-Cons = Icons + Ocons
+Icons = And(Or(Is[0] == 0, Is[0] == 1),
+            Or(Is[1] == 0, Is[1] == 1),
+            Or(Is[2] == 0, Is[2] == 1),
+            Or(Is[3] == 0, Is[3] == 1),
+            Or(Is[4] == 0, Is[4] == 1),
+            Or(Is[5] == 0, Is[5] == 1),
+            Or(Is[6] == 0, Is[6] == 1),
+            Or(Is[7] == 0, Is[7] == 1))
+Ocons = And(Or(Os[0] == 0, Os[0] == 1),
+            Or(Os[1] == 0, Os[1] == 1),
+            Or(Os[2] == 0, Os[2] == 1),
+            Or(Os[3] == 0, Os[3] == 1),
+            Or(Os[4] == 0, Os[4] == 1),
+            Or(Os[5] == 0, Os[5] == 1),
+            Or(Os[6] == 0, Os[6] == 1),
+            Or(Os[7] == 0, Os[7] == 1))
+Cons = And(Icons, Ocons)
 
 # Gathering all constraints under one roof
+Spec = And(spec, Cons, IO_Assertions)
 prereq = And(lib, conn)
-impl = [Implies(prereq, spec)]
-Final_Assertion = wfp + Cons + impl + IO_Assertions
+impl = [Implies(prereq, Spec)]
+Final_Assertion = wfp + [prereq]
 
-solve(Final_Assertion)
-
-'''
-Windows PowerShell
-Copyright (C) Microsoft Corporation. All rights reserved.
-
-PS C:\Users\SADR\Presentations and Reports\Program Synthesis\Project\LoopFreeSynthesis> "D:/Programs Downloads/New folder/Scripts/activate"
-D:/Programs Downloads/New folder/Scripts/activate
-PS C:\Users\SADR\Presentations and Reports\Program Synthesis\Project\LoopFreeSynthesis> conda activate LoopFree
-conda : The term 'conda' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, 
-or if a path was included, verify that the path is correct and try again.
-At line:1 char:1
-+ conda activate LoopFree
-+ ~~~~~
-    + CategoryInfo          : ObjectNotFound: (conda:String) [], CommandNotFoundException
-    + FullyQualifiedErrorId : CommandNotFoundException
-
-PS C:\Users\SADR\Presentations and Reports\Program Synthesis\Project\LoopFreeSynthesis>  & 'D:\Programs Downloads\New folder\envs\LoopFree\python.exe' 'c:\Users\SADR\.vscode\extensions\ms-python.python-2023.8.0\pythonFiles\lib\python\debugpy\adapter/../..\debugpy\launcher' '50783' '--' 'c:\Users\SADR\Presentations and Reports\Program Synthesis\Project\LoopFreeSynthesis\test-Z3.py'
-[I2 = 0,
- I7 = 0,
- O0 = 0,
- I1 = 0,
- I2p = 254,
- I6 = 0,
- O2p = 254,
- L_O2p = 1,
- O6 = 0,
- L_I2z = 0,
- O3 = 0,
- I5 = 0,
- L_I2p = 0,
- O7 = 0,
- L_I1p = 1,
- O2 = 0,
- I4 = 0,
- I2z = 254,
- O4 = 0,
- O5 = 0,
- I1p = 1,
- I3 = 0,
- O1 = 0,
- L_O1p = 2,
- O1p = 238,
- LI = 254,
- LO = 1,
- I0 = 0,
- O = 0,
- I = 0]
-'''
+solve([Spec] + [I == 48] + Final_Assertion)
