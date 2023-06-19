@@ -1,0 +1,2513 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+
+PS D:\2023-Spring\Synthesis\Project\python-brahma-master\python-brahma-master>  & 'D:\ProgramFiles\Anaconda3\envs\P39\python.exe' 'c:\Users\meyssam\.vscode\extensions\ms-python.python-2023.10.1\pythonFiles\lib\python\debugpy\adapter/../..\debugpy\launcher' '5222' '--' 'd:\2023-Spring\Synthesis\Project\python-brahma-master\python-brahma-master\cli.py'
+Welcome to python-brahma. Type in a python function to specify the constraint.
+E.g., `lambda y, a, b: y == a + b`
+>>> lambda y, a: y == a | (a + 1)
+<function <lambda> at 0x000001AEF3E755E0>
+d:\2023-Spring\Synthesis\Project\python-brahma-master\python-brahma-master\cli.py:11: DeprecationWarning: inspect.getargspec() is deprecated since Python 3.0, use inspect.signature() or inspect.getfullargspec()
+  arity = len(inspect.getargspec(constraint)[0]) - 1
+
+
+
+synthesizer wfp_cons:
+And(And(cur_locParam_0_0 >= 0, cur_locParam_0_0 < 13),
+    And(cur_locParam_0_1 >= 0, cur_locParam_0_1 < 13),
+    And(cur_locReturn_0 >= 1, cur_locReturn_0 < 13),  
+    And(cur_locParam_1_0 >= 0, cur_locParam_1_0 < 13),
+    And(cur_locParam_1_1 >= 0, cur_locParam_1_1 < 13),
+    And(cur_locReturn_1 >= 1, cur_locReturn_1 < 13),  
+    And(cur_locParam_2_0 >= 0, cur_locParam_2_0 < 13),
+    And(cur_locReturn_2 >= 1, cur_locReturn_2 < 13),  
+    And(cur_locParam_3_0 >= 0, cur_locParam_3_0 < 13),
+    And(cur_locReturn_3 >= 1, cur_locReturn_3 < 13),  
+    And(cur_locParam_4_0 >= 0, cur_locParam_4_0 < 13),
+    And(cur_locParam_4_1 >= 0, cur_locParam_4_1 < 13),
+    And(cur_locReturn_4 >= 1, cur_locReturn_4 < 13),
+    And(cur_locParam_5_0 >= 0, cur_locParam_5_0 < 13),
+    And(cur_locParam_5_1 >= 0, cur_locParam_5_1 < 13),
+    And(cur_locReturn_5 >= 1, cur_locReturn_5 < 13),
+    And(cur_locParam_6_0 >= 0, cur_locParam_6_0 < 13),
+    And(cur_locReturn_6 >= 1, cur_locReturn_6 < 13),
+    And(cur_locParam_7_0 >= 0, cur_locParam_7_0 < 13),
+    And(cur_locParam_7_1 >= 0, cur_locParam_7_1 < 13),
+    And(cur_locReturn_7 >= 1, cur_locReturn_7 < 13),
+    And(cur_locParam_8_0 >= 0, cur_locParam_8_0 < 13),
+    And(cur_locReturn_8 >= 1, cur_locReturn_8 < 13),
+    And(cur_locParam_9_0 >= 0, cur_locParam_9_0 < 13),
+    And(cur_locReturn_9 >= 1, cur_locReturn_9 < 13),
+    And(cur_locParam_10_0 >= 0, cur_locParam_10_0 < 13),
+    And(cur_locParam_10_1 >= 0, cur_locParam_10_1 < 13),
+    And(cur_locReturn_10 >= 1, cur_locReturn_10 < 13),
+    And(cur_locParam_11_0 >= 0, cur_locParam_11_0 < 13),
+    And(cur_locParam_11_1 >= 0, cur_locParam_11_1 < 13),
+    And(cur_locReturn_11 >= 1, cur_locReturn_11 < 13),
+    And(cur_locOutput >= 0, cur_locOutput < 13),
+    cur_locInput_0 == 0,
+    cur_locReturn_1 != cur_locReturn_0,
+    cur_locReturn_2 != cur_locReturn_0,
+    cur_locReturn_2 != cur_locReturn_1,
+    cur_locReturn_3 != cur_locReturn_0,
+    cur_locReturn_3 != cur_locReturn_1,
+    cur_locReturn_3 != cur_locReturn_2,
+    cur_locReturn_4 != cur_locReturn_0,
+    cur_locReturn_4 != cur_locReturn_1,
+    cur_locReturn_4 != cur_locReturn_2,
+    cur_locReturn_4 != cur_locReturn_3,
+    cur_locReturn_5 != cur_locReturn_0,
+    cur_locReturn_5 != cur_locReturn_1,
+    cur_locReturn_5 != cur_locReturn_2,
+    cur_locReturn_5 != cur_locReturn_3,
+    cur_locReturn_5 != cur_locReturn_4,
+    cur_locReturn_6 != cur_locReturn_0,
+    cur_locReturn_6 != cur_locReturn_1,
+    cur_locReturn_6 != cur_locReturn_2,
+    cur_locReturn_6 != cur_locReturn_3,
+    cur_locReturn_6 != cur_locReturn_4,
+    cur_locReturn_6 != cur_locReturn_5,
+    cur_locReturn_7 != cur_locReturn_0,
+    cur_locReturn_7 != cur_locReturn_1,
+    cur_locReturn_7 != cur_locReturn_2,
+    cur_locReturn_7 != cur_locReturn_3,
+    cur_locReturn_7 != cur_locReturn_4,
+    cur_locReturn_7 != cur_locReturn_5,
+    cur_locReturn_7 != cur_locReturn_6,
+    cur_locReturn_8 != cur_locReturn_0,
+    cur_locReturn_8 != cur_locReturn_1,
+    cur_locReturn_8 != cur_locReturn_2,
+    cur_locReturn_8 != cur_locReturn_3,
+    cur_locReturn_8 != cur_locReturn_4,
+    cur_locReturn_8 != cur_locReturn_5,
+    cur_locReturn_8 != cur_locReturn_6,
+    cur_locReturn_8 != cur_locReturn_7,
+    cur_locReturn_9 != cur_locReturn_0,
+    cur_locReturn_9 != cur_locReturn_1,
+    cur_locReturn_9 != cur_locReturn_2,
+    cur_locReturn_9 != cur_locReturn_3,
+    cur_locReturn_9 != cur_locReturn_4,
+    cur_locReturn_9 != cur_locReturn_5,
+    cur_locReturn_9 != cur_locReturn_6,
+    cur_locReturn_9 != cur_locReturn_7,
+    cur_locReturn_9 != cur_locReturn_8,
+    cur_locReturn_10 != cur_locReturn_0,
+    cur_locReturn_10 != cur_locReturn_1,
+    cur_locReturn_10 != cur_locReturn_2,
+    cur_locReturn_10 != cur_locReturn_3,
+    cur_locReturn_10 != cur_locReturn_4,
+    cur_locReturn_10 != cur_locReturn_5,
+    cur_locReturn_10 != cur_locReturn_6,
+    cur_locReturn_10 != cur_locReturn_7,
+    cur_locReturn_10 != cur_locReturn_8,
+    cur_locReturn_10 != cur_locReturn_9,
+    cur_locReturn_11 != cur_locReturn_0,
+    cur_locReturn_11 != cur_locReturn_1,
+    cur_locReturn_11 != cur_locReturn_2,
+    cur_locReturn_11 != cur_locReturn_3,
+    cur_locReturn_11 != cur_locReturn_4,
+    cur_locReturn_11 != cur_locReturn_5,
+    cur_locReturn_11 != cur_locReturn_6,
+    cur_locReturn_11 != cur_locReturn_7,
+    cur_locReturn_11 != cur_locReturn_8,
+    cur_locReturn_11 != cur_locReturn_9,
+    cur_locReturn_11 != cur_locReturn_10,
+    cur_locParam_0_0 < cur_locReturn_0,
+    cur_locParam_0_1 < cur_locReturn_0,
+    cur_locParam_1_0 < cur_locReturn_1,
+    cur_locParam_1_1 < cur_locReturn_1,
+    cur_locParam_2_0 < cur_locReturn_2,
+    cur_locParam_3_0 < cur_locReturn_3,
+    cur_locParam_4_0 < cur_locReturn_4,
+    cur_locParam_4_1 < cur_locReturn_4,
+    cur_locParam_5_0 < cur_locReturn_5,
+    cur_locParam_5_1 < cur_locReturn_5,
+    cur_locParam_6_0 < cur_locReturn_6,
+    cur_locParam_7_0 < cur_locReturn_7,
+    cur_locParam_7_1 < cur_locReturn_7,
+    cur_locParam_8_0 < cur_locReturn_8,
+    cur_locParam_9_0 < cur_locReturn_9,
+    cur_locParam_10_0 < cur_locReturn_10,
+    cur_locParam_10_1 < cur_locReturn_10,
+    cur_locParam_11_0 < cur_locReturn_11,
+    cur_locParam_11_1 < cur_locReturn_11)
+
+
+
+synthesizer adding max_len:
+
+
+
+verifier adding conn_cons:
+And(Implies(cur_locOutput == cur_locInput_0,
+            ctr_valOutput == ctr_valInput_0),
+    Implies(cur_locParam_0_0 == cur_locInput_0,
+            ctr_valParam_0_0 == ctr_valInput_0),
+    Implies(cur_locParam_0_0 == cur_locOutput,
+            ctr_valParam_0_0 == ctr_valOutput),
+    Implies(cur_locParam_0_1 == cur_locInput_0,
+            ctr_valParam_0_1 == ctr_valInput_0),
+    Implies(cur_locParam_0_1 == cur_locOutput,
+            ctr_valParam_0_1 == ctr_valOutput),
+    Implies(cur_locParam_0_1 == cur_locParam_0_0,
+            ctr_valParam_0_1 == ctr_valParam_0_0),
+    Implies(cur_locReturn_0 == cur_locInput_0,
+            ctr_valReturn_0 == ctr_valInput_0),
+    Implies(cur_locReturn_0 == cur_locOutput,
+            ctr_valReturn_0 == ctr_valOutput),
+    Implies(cur_locReturn_0 == cur_locParam_0_0,
+            ctr_valReturn_0 == ctr_valParam_0_0),
+    Implies(cur_locReturn_0 == cur_locParam_0_1,
+            ctr_valReturn_0 == ctr_valParam_0_1),
+    Implies(cur_locParam_1_0 == cur_locInput_0,
+            ctr_valParam_1_0 == ctr_valInput_0),
+    Implies(cur_locParam_1_0 == cur_locOutput,
+            ctr_valParam_1_0 == ctr_valOutput),
+    Implies(cur_locParam_1_0 == cur_locParam_0_0,
+            ctr_valParam_1_0 == ctr_valParam_0_0),
+    Implies(cur_locParam_1_0 == cur_locParam_0_1,
+            ctr_valParam_1_0 == ctr_valParam_0_1),
+    Implies(cur_locParam_1_0 == cur_locReturn_0,
+            ctr_valParam_1_0 == ctr_valReturn_0),
+    Implies(cur_locParam_1_1 == cur_locInput_0,
+            ctr_valParam_1_1 == ctr_valInput_0),
+    Implies(cur_locParam_1_1 == cur_locOutput,
+            ctr_valParam_1_1 == ctr_valOutput),
+    Implies(cur_locParam_1_1 == cur_locParam_0_0,
+            ctr_valParam_1_1 == ctr_valParam_0_0),
+    Implies(cur_locParam_1_1 == cur_locParam_0_1,
+            ctr_valParam_1_1 == ctr_valParam_0_1),
+    Implies(cur_locParam_1_1 == cur_locReturn_0,
+            ctr_valParam_1_1 == ctr_valReturn_0),
+    Implies(cur_locParam_1_1 == cur_locParam_1_0,
+            ctr_valParam_1_1 == ctr_valParam_1_0),
+    Implies(cur_locReturn_1 == cur_locInput_0,
+            ctr_valReturn_1 == ctr_valInput_0),
+    Implies(cur_locReturn_1 == cur_locOutput,
+            ctr_valReturn_1 == ctr_valOutput),
+    Implies(cur_locReturn_1 == cur_locParam_0_0,
+            ctr_valReturn_1 == ctr_valParam_0_0),
+    Implies(cur_locReturn_1 == cur_locParam_0_1,
+            ctr_valReturn_1 == ctr_valParam_0_1),
+    Implies(cur_locReturn_1 == cur_locReturn_0,
+            ctr_valReturn_1 == ctr_valReturn_0),
+    Implies(cur_locReturn_1 == cur_locParam_1_0,
+            ctr_valReturn_1 == ctr_valParam_1_0),
+    Implies(cur_locReturn_1 == cur_locParam_1_1,
+            ctr_valReturn_1 == ctr_valParam_1_1),
+    Implies(cur_locParam_2_0 == cur_locInput_0,
+            ctr_valParam_2_0 == ctr_valInput_0),
+    Implies(cur_locParam_2_0 == cur_locOutput,
+            ctr_valParam_2_0 == ctr_valOutput),
+    Implies(cur_locParam_2_0 == cur_locParam_0_0,
+            ctr_valParam_2_0 == ctr_valParam_0_0),
+    Implies(cur_locParam_2_0 == cur_locParam_0_1,
+            ctr_valParam_2_0 == ctr_valParam_0_1),
+    Implies(cur_locParam_2_0 == cur_locReturn_0,
+            ctr_valParam_2_0 == ctr_valReturn_0),
+    Implies(cur_locParam_2_0 == cur_locParam_1_0,
+            ctr_valParam_2_0 == ctr_valParam_1_0),
+    Implies(cur_locParam_2_0 == cur_locParam_1_1,
+            ctr_valParam_2_0 == ctr_valParam_1_1),
+    Implies(cur_locParam_2_0 == cur_locReturn_1,
+            ctr_valParam_2_0 == ctr_valReturn_1),
+    Implies(cur_locReturn_2 == cur_locInput_0,
+            ctr_valReturn_2 == ctr_valInput_0),
+    Implies(cur_locReturn_2 == cur_locOutput,
+            ctr_valReturn_2 == ctr_valOutput),
+    Implies(cur_locReturn_2 == cur_locParam_0_0,
+            ctr_valReturn_2 == ctr_valParam_0_0),
+    Implies(cur_locReturn_2 == cur_locParam_0_1,
+            ctr_valReturn_2 == ctr_valParam_0_1),
+    Implies(cur_locReturn_2 == cur_locReturn_0,
+            ctr_valReturn_2 == ctr_valReturn_0),
+    Implies(cur_locReturn_2 == cur_locParam_1_0,
+            ctr_valReturn_2 == ctr_valParam_1_0),
+    Implies(cur_locReturn_2 == cur_locParam_1_1,
+            ctr_valReturn_2 == ctr_valParam_1_1),
+    Implies(cur_locReturn_2 == cur_locReturn_1,
+            ctr_valReturn_2 == ctr_valReturn_1),
+    Implies(cur_locReturn_2 == cur_locParam_2_0,
+            ctr_valReturn_2 == ctr_valParam_2_0),
+    Implies(cur_locParam_3_0 == cur_locInput_0,
+            ctr_valParam_3_0 == ctr_valInput_0),
+    Implies(cur_locParam_3_0 == cur_locOutput,
+            ctr_valParam_3_0 == ctr_valOutput),
+    Implies(cur_locParam_3_0 == cur_locParam_0_0,
+            ctr_valParam_3_0 == ctr_valParam_0_0),
+    Implies(cur_locParam_3_0 == cur_locParam_0_1,
+            ctr_valParam_3_0 == ctr_valParam_0_1),
+    Implies(cur_locParam_3_0 == cur_locReturn_0,
+            ctr_valParam_3_0 == ctr_valReturn_0),
+    Implies(cur_locParam_3_0 == cur_locParam_1_0,
+            ctr_valParam_3_0 == ctr_valParam_1_0),
+    Implies(cur_locParam_3_0 == cur_locParam_1_1,
+            ctr_valParam_3_0 == ctr_valParam_1_1),
+    Implies(cur_locParam_3_0 == cur_locReturn_1,
+            ctr_valParam_3_0 == ctr_valReturn_1),
+    Implies(cur_locParam_3_0 == cur_locParam_2_0,
+            ctr_valParam_3_0 == ctr_valParam_2_0),
+    Implies(cur_locParam_3_0 == cur_locReturn_2,
+            ctr_valParam_3_0 == ctr_valReturn_2),
+    Implies(cur_locReturn_3 == cur_locInput_0,
+            ctr_valReturn_3 == ctr_valInput_0),
+    Implies(cur_locReturn_3 == cur_locOutput,
+            ctr_valReturn_3 == ctr_valOutput),
+    Implies(cur_locReturn_3 == cur_locParam_0_0,
+            ctr_valReturn_3 == ctr_valParam_0_0),
+    Implies(cur_locReturn_3 == cur_locParam_0_1,
+            ctr_valReturn_3 == ctr_valParam_0_1),
+    Implies(cur_locReturn_3 == cur_locReturn_0,
+            ctr_valReturn_3 == ctr_valReturn_0),
+    Implies(cur_locReturn_3 == cur_locParam_1_0,
+            ctr_valReturn_3 == ctr_valParam_1_0),
+    Implies(cur_locReturn_3 == cur_locParam_1_1,
+            ctr_valReturn_3 == ctr_valParam_1_1),
+    Implies(cur_locReturn_3 == cur_locReturn_1,
+            ctr_valReturn_3 == ctr_valReturn_1),
+    Implies(cur_locReturn_3 == cur_locParam_2_0,
+            ctr_valReturn_3 == ctr_valParam_2_0),
+    Implies(cur_locReturn_3 == cur_locReturn_2,
+            ctr_valReturn_3 == ctr_valReturn_2),
+    Implies(cur_locReturn_3 == cur_locParam_3_0,
+            ctr_valReturn_3 == ctr_valParam_3_0),
+    Implies(cur_locParam_4_0 == cur_locInput_0,
+            ctr_valParam_4_0 == ctr_valInput_0),
+    Implies(cur_locParam_4_0 == cur_locOutput,
+            ctr_valParam_4_0 == ctr_valOutput),
+    Implies(cur_locParam_4_0 == cur_locParam_0_0,
+            ctr_valParam_4_0 == ctr_valParam_0_0),
+    Implies(cur_locParam_4_0 == cur_locParam_0_1,
+            ctr_valParam_4_0 == ctr_valParam_0_1),
+    Implies(cur_locParam_4_0 == cur_locReturn_0,
+            ctr_valParam_4_0 == ctr_valReturn_0),
+    Implies(cur_locParam_4_0 == cur_locParam_1_0,
+            ctr_valParam_4_0 == ctr_valParam_1_0),
+    Implies(cur_locParam_4_0 == cur_locParam_1_1,
+            ctr_valParam_4_0 == ctr_valParam_1_1),
+    Implies(cur_locParam_4_0 == cur_locReturn_1,
+            ctr_valParam_4_0 == ctr_valReturn_1),
+    Implies(cur_locParam_4_0 == cur_locParam_2_0,
+            ctr_valParam_4_0 == ctr_valParam_2_0),
+    Implies(cur_locParam_4_0 == cur_locReturn_2,
+            ctr_valParam_4_0 == ctr_valReturn_2),
+    Implies(cur_locParam_4_0 == cur_locParam_3_0,
+            ctr_valParam_4_0 == ctr_valParam_3_0),
+    Implies(cur_locParam_4_0 == cur_locReturn_3,
+            ctr_valParam_4_0 == ctr_valReturn_3),
+    Implies(cur_locParam_4_1 == cur_locInput_0,
+            ctr_valParam_4_1 == ctr_valInput_0),
+    Implies(cur_locParam_4_1 == cur_locOutput,
+            ctr_valParam_4_1 == ctr_valOutput),
+    Implies(cur_locParam_4_1 == cur_locParam_0_0,
+            ctr_valParam_4_1 == ctr_valParam_0_0),
+    Implies(cur_locParam_4_1 == cur_locParam_0_1,
+            ctr_valParam_4_1 == ctr_valParam_0_1),
+    Implies(cur_locParam_4_1 == cur_locReturn_0,
+            ctr_valParam_4_1 == ctr_valReturn_0),
+    Implies(cur_locParam_4_1 == cur_locParam_1_0,
+            ctr_valParam_4_1 == ctr_valParam_1_0),
+    Implies(cur_locParam_4_1 == cur_locParam_1_1,
+            ctr_valParam_4_1 == ctr_valParam_1_1),
+    Implies(cur_locParam_4_1 == cur_locReturn_1,
+            ctr_valParam_4_1 == ctr_valReturn_1),
+    Implies(cur_locParam_4_1 == cur_locParam_2_0,
+            ctr_valParam_4_1 == ctr_valParam_2_0),
+    Implies(cur_locParam_4_1 == cur_locReturn_2,
+            ctr_valParam_4_1 == ctr_valReturn_2),
+    Implies(cur_locParam_4_1 == cur_locParam_3_0,
+            ctr_valParam_4_1 == ctr_valParam_3_0),
+    Implies(cur_locParam_4_1 == cur_locReturn_3,
+            ctr_valParam_4_1 == ctr_valReturn_3),
+    Implies(cur_locParam_4_1 == cur_locParam_4_0,
+            ctr_valParam_4_1 == ctr_valParam_4_0),
+    Implies(cur_locReturn_4 == cur_locInput_0,
+            ctr_valReturn_4 == ctr_valInput_0),
+    Implies(cur_locReturn_4 == cur_locOutput,
+            ctr_valReturn_4 == ctr_valOutput),
+    Implies(cur_locReturn_4 == cur_locParam_0_0,
+            ctr_valReturn_4 == ctr_valParam_0_0),
+    Implies(cur_locReturn_4 == cur_locParam_0_1,
+            ctr_valReturn_4 == ctr_valParam_0_1),
+    Implies(cur_locReturn_4 == cur_locReturn_0,
+            ctr_valReturn_4 == ctr_valReturn_0),
+    Implies(cur_locReturn_4 == cur_locParam_1_0,
+            ctr_valReturn_4 == ctr_valParam_1_0),
+    Implies(cur_locReturn_4 == cur_locParam_1_1,
+            ctr_valReturn_4 == ctr_valParam_1_1),
+    Implies(cur_locReturn_4 == cur_locReturn_1,
+            ctr_valReturn_4 == ctr_valReturn_1),
+    Implies(cur_locReturn_4 == cur_locParam_2_0,
+            ctr_valReturn_4 == ctr_valParam_2_0),
+...
+
+
+
+verifier adding lib_cons:
+And(ctr_valReturn_0 == ctr_valParam_0_0 + ctr_valParam_0_1,
+    ctr_valReturn_1 == ctr_valParam_1_0 - ctr_valParam_1_1,
+    ctr_valReturn_2 == ctr_valParam_2_0 + 1,
+    ctr_valReturn_3 == ctr_valParam_3_0 - 1,
+    ctr_valReturn_4 == ctr_valParam_4_0 & ctr_valParam_4_1,
+    ctr_valReturn_5 == ctr_valParam_5_0 | ctr_valParam_5_1,
+    ctr_valReturn_6 == ~ctr_valParam_6_0,
+    ctr_valReturn_7 == ctr_valParam_7_0 ^ ctr_valParam_7_1,
+    ctr_valReturn_8 == ctr_valParam_8_0 >> 31,
+    ctr_valReturn_9 == -(ctr_valParam_9_0 >> 31),
+    ctr_valReturn_10 ==
+    If(UGT(ctr_valParam_10_0, ctr_valParam_10_1),
+       4294967295,
+       0),
+    ctr_valReturn_11 ==
+    If(ULE(ctr_valParam_11_0, ctr_valParam_11_1),
+       4294967295,
+       0))
+
+
+
+verifier adding NOT spec:
+this is normal spec
+ctr_valOutput == ctr_valInput_0 | ctr_valInput_0 + 1
+> Running iteration 0 ...
+
+
+
+syn_model in iteration  0 :
+
+[cur_locParam_6_0 = 0,
+ cur_locParam_9_0 = 0,
+ cur_locReturn_3 = 4,
+ cur_locReturn_8 = 9,
+ cur_locParam_0_1 = 0,
+ cur_locReturn_1 = 2,
+ cur_locParam_1_1 = 0,
+ cur_locParam_0_0 = 0,
+ cur_locParam_7_0 = 0,
+ cur_locParam_5_0 = 0,
+ cur_locParam_5_1 = 0,
+ cur_locParam_10_0 = 0,
+ cur_locReturn_9 = 10,
+ cur_locReturn_10 = 11,
+ cur_locParam_7_1 = 0,
+ cur_locParam_8_0 = 0,
+ cur_locParam_11_0 = 0,
+ cur_locOutput = 0,
+ cur_locParam_10_1 = 0,
+ cur_locParam_11_1 = 0,
+ cur_locReturn_0 = 1,
+ cur_locReturn_2 = 3,
+ cur_locParam_4_1 = 0,
+ cur_locReturn_7 = 8,
+ cur_locParam_3_0 = 0,
+ cur_locReturn_6 = 7,
+ cur_locParam_4_0 = 0,
+ cur_locReturn_5 = 6,
+ cur_locParam_1_0 = 0,
+ cur_locReturn_4 = 5,
+ cur_locReturn_11 = 12,
+ cur_locParam_2_0 = 0,
+ cur_locInput_0 = 0]
+
+
+
+add lInput to verifier:
+0 == cur_locInput_0
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+0 == cur_locParam_0_0
+
+
+
+add lparams to verifier:
+0 == cur_locParam_0_1
+
+
+
+add lRet to verifier:
+1 == cur_locReturn_0
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+0 == cur_locParam_1_0
+
+
+
+add lparams to verifier:
+0 == cur_locParam_1_1
+
+
+
+add lRet to verifier:
+2 == cur_locReturn_1
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+0 == cur_locParam_2_0
+
+
+
+add lRet to verifier:
+3 == cur_locReturn_2
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+0 == cur_locParam_3_0
+
+
+
+add lRet to verifier:
+4 == cur_locReturn_3
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+0 == cur_locParam_4_0
+
+
+
+add lparams to verifier:
+0 == cur_locParam_4_1
+
+
+
+add lRet to verifier:
+5 == cur_locReturn_4
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+0 == cur_locParam_5_0
+
+
+
+add lparams to verifier:
+0 == cur_locParam_5_1
+
+
+
+add lRet to verifier:
+6 == cur_locReturn_5
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+0 == cur_locParam_6_0
+
+
+
+add lRet to verifier:
+7 == cur_locReturn_6
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+0 == cur_locParam_7_0
+
+
+
+add lparams to verifier:
+0 == cur_locParam_7_1
+
+
+
+add lRet to verifier:
+8 == cur_locReturn_7
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+0 == cur_locParam_8_0
+
+
+
+add lRet to verifier:
+9 == cur_locReturn_8
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+0 == cur_locParam_9_0
+
+
+
+add lRet to verifier:
+10 == cur_locReturn_9
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+0 == cur_locParam_10_0
+
+
+
+add lparams to verifier:
+0 == cur_locParam_10_1
+
+
+
+add lRet to verifier:
+11 == cur_locReturn_10
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+0 == cur_locParam_11_0
+
+
+
+add lparams to verifier:
+0 == cur_locParam_11_1
+
+
+
+add lRet to verifier:
+12 == cur_locReturn_11
+
+
+
+add lOutput to verifier:
+0 == cur_locOutput
+
+
+
+ver_model in iteration  0 :
+
+[ctr_valParam_10_1 = 0,
+ ctr_valReturn_2 = 1,
+ cur_locInput_0 = 0,
+ cur_locParam_1_1 = 0,
+ cur_locReturn_1 = 2,
+ ctr_valReturn_8 = 0,
+ cur_locParam_0_0 = 0,
+ ctr_valParam_9_0 = 0,
+ ctr_valReturn_10 = 0,
+ cur_locParam_5_1 = 0,
+ cur_locReturn_10 = 11,
+ cur_locReturn_9 = 10,
+ ctr_valParam_10_0 = 0,
+ cur_locOutput = 0,
+ ctr_valParam_0_0 = 0,
+ ctr_valParam_7_0 = 0,
+ cur_locParam_7_1 = 0,
+ cur_locParam_10_1 = 0,
+ cur_locParam_11_0 = 0,
+ ctr_valReturn_5 = 0,
+ ctr_valInput_0 = 0,
+ ctr_valParam_2_0 = 0,
+ cur_locParam_4_1 = 0,
+ cur_locParam_11_1 = 0,
+ ctr_valReturn_0 = 0,
+ cur_locParam_3_0 = 0,
+ ctr_valParam_1_0 = 0,
+ cur_locParam_4_0 = 0,
+ ctr_valParam_8_0 = 0,
+ cur_locParam_1_0 = 0,
+ cur_locParam_6_0 = 0,
+ cur_locReturn_3 = 4,
+ cur_locReturn_4 = 5,
+ cur_locParam_9_0 = 0,
+ cur_locReturn_11 = 12,
+ cur_locParam_0_1 = 0,
+ cur_locReturn_8 = 9,
+ ctr_valReturn_9 = 0,
+ ctr_valReturn_4 = 0,
+ ctr_valParam_5_0 = 0,
+ ctr_valParam_6_0 = 0,
+ ctr_valReturn_7 = 0,
+ ctr_valParam_11_0 = 0,
+ ctr_valParam_3_0 = 0,
+ cur_locParam_7_0 = 0,
+ cur_locParam_5_0 = 0,
+ ctr_valOutput = 0,
+ ctr_valReturn_6 = 4294967295,
+ cur_locParam_10_0 = 0,
+ ctr_valReturn_3 = 4294967295,
+ cur_locParam_8_0 = 0,
+ ctr_valParam_4_1 = 0,
+ ctr_valParam_0_1 = 0,
+ cur_locReturn_0 = 1,
+ cur_locReturn_2 = 3,
+ ctr_valReturn_1 = 0,
+ cur_locReturn_7 = 8,
+ ctr_valParam_7_1 = 0,
+ cur_locReturn_6 = 7,
+ cur_locReturn_5 = 6,
+ ctr_valParam_4_0 = 0,
+ ctr_valParam_1_1 = 0,
+ ctr_valReturn_11 = 4294967295,
+ ctr_valParam_11_1 = 0,
+ ctr_valParam_5_1 = 0,
+ cur_locParam_2_0 = 0]
+
+
+
+add lib_cons to synthesizer:
+And(c0_valReturn_0 == c0_valParam_0_0 + c0_valParam_0_1,
+    c0_valReturn_1 == c0_valParam_1_0 - c0_valParam_1_1,
+    c0_valReturn_2 == c0_valParam_2_0 + 1,
+    c0_valReturn_3 == c0_valParam_3_0 - 1,
+    c0_valReturn_4 == c0_valParam_4_0 & c0_valParam_4_1,
+    c0_valReturn_5 == c0_valParam_5_0 | c0_valParam_5_1,
+    c0_valReturn_6 == ~c0_valParam_6_0,
+    c0_valReturn_7 == c0_valParam_7_0 ^ c0_valParam_7_1,
+    c0_valReturn_8 == c0_valParam_8_0 >> 31,
+    c0_valReturn_9 == -(c0_valParam_9_0 >> 31),
+    c0_valReturn_10 ==
+    If(UGT(c0_valParam_10_0, c0_valParam_10_1),
+       4294967295,
+       0),
+    c0_valReturn_11 ==
+    If(ULE(c0_valParam_11_0, c0_valParam_11_1),
+       4294967295,
+       0))
+
+
+
+add conn_cons to synthesizer:
+And(Implies(cur_locOutput == cur_locInput_0,
+            c0_valOutput == c0_valInput_0),
+    Implies(cur_locParam_0_0 == cur_locInput_0,
+            c0_valParam_0_0 == c0_valInput_0),
+    Implies(cur_locParam_0_0 == cur_locOutput,
+            c0_valParam_0_0 == c0_valOutput),
+    Implies(cur_locParam_0_1 == cur_locInput_0,
+            c0_valParam_0_1 == c0_valInput_0),
+    Implies(cur_locParam_0_1 == cur_locOutput,
+            c0_valParam_0_1 == c0_valOutput),
+    Implies(cur_locParam_0_1 == cur_locParam_0_0,
+            c0_valParam_0_1 == c0_valParam_0_0),
+    Implies(cur_locReturn_0 == cur_locInput_0,
+            c0_valReturn_0 == c0_valInput_0),
+    Implies(cur_locReturn_0 == cur_locOutput,
+            c0_valReturn_0 == c0_valOutput),
+    Implies(cur_locReturn_0 == cur_locParam_0_0,
+            c0_valReturn_0 == c0_valParam_0_0),
+    Implies(cur_locReturn_0 == cur_locParam_0_1,
+            c0_valReturn_0 == c0_valParam_0_1),
+    Implies(cur_locParam_1_0 == cur_locInput_0,
+            c0_valParam_1_0 == c0_valInput_0),
+    Implies(cur_locParam_1_0 == cur_locOutput,
+            c0_valParam_1_0 == c0_valOutput),
+    Implies(cur_locParam_1_0 == cur_locParam_0_0,
+            c0_valParam_1_0 == c0_valParam_0_0),
+    Implies(cur_locParam_1_0 == cur_locParam_0_1,
+            c0_valParam_1_0 == c0_valParam_0_1),
+    Implies(cur_locParam_1_0 == cur_locReturn_0,
+            c0_valParam_1_0 == c0_valReturn_0),
+    Implies(cur_locParam_1_1 == cur_locInput_0,
+            c0_valParam_1_1 == c0_valInput_0),
+    Implies(cur_locParam_1_1 == cur_locOutput,
+            c0_valParam_1_1 == c0_valOutput),
+    Implies(cur_locParam_1_1 == cur_locParam_0_0,
+            c0_valParam_1_1 == c0_valParam_0_0),
+    Implies(cur_locParam_1_1 == cur_locParam_0_1,
+            c0_valParam_1_1 == c0_valParam_0_1),
+    Implies(cur_locParam_1_1 == cur_locReturn_0,
+            c0_valParam_1_1 == c0_valReturn_0),
+    Implies(cur_locParam_1_1 == cur_locParam_1_0,
+            c0_valParam_1_1 == c0_valParam_1_0),
+    Implies(cur_locReturn_1 == cur_locInput_0,
+            c0_valReturn_1 == c0_valInput_0),
+    Implies(cur_locReturn_1 == cur_locOutput,
+            c0_valReturn_1 == c0_valOutput),
+    Implies(cur_locReturn_1 == cur_locParam_0_0,
+            c0_valReturn_1 == c0_valParam_0_0),
+    Implies(cur_locReturn_1 == cur_locParam_0_1,
+            c0_valReturn_1 == c0_valParam_0_1),
+    Implies(cur_locReturn_1 == cur_locReturn_0,
+            c0_valReturn_1 == c0_valReturn_0),
+    Implies(cur_locReturn_1 == cur_locParam_1_0,
+            c0_valReturn_1 == c0_valParam_1_0),
+    Implies(cur_locReturn_1 == cur_locParam_1_1,
+            c0_valReturn_1 == c0_valParam_1_1),
+    Implies(cur_locParam_2_0 == cur_locInput_0,
+            c0_valParam_2_0 == c0_valInput_0),
+    Implies(cur_locParam_2_0 == cur_locOutput,
+            c0_valParam_2_0 == c0_valOutput),
+    Implies(cur_locParam_2_0 == cur_locParam_0_0,
+            c0_valParam_2_0 == c0_valParam_0_0),
+    Implies(cur_locParam_2_0 == cur_locParam_0_1,
+            c0_valParam_2_0 == c0_valParam_0_1),
+    Implies(cur_locParam_2_0 == cur_locReturn_0,
+            c0_valParam_2_0 == c0_valReturn_0),
+    Implies(cur_locParam_2_0 == cur_locParam_1_0,
+            c0_valParam_2_0 == c0_valParam_1_0),
+    Implies(cur_locParam_2_0 == cur_locParam_1_1,
+            c0_valParam_2_0 == c0_valParam_1_1),
+    Implies(cur_locParam_2_0 == cur_locReturn_1,
+            c0_valParam_2_0 == c0_valReturn_1),
+    Implies(cur_locReturn_2 == cur_locInput_0,
+            c0_valReturn_2 == c0_valInput_0),
+    Implies(cur_locReturn_2 == cur_locOutput,
+            c0_valReturn_2 == c0_valOutput),
+    Implies(cur_locReturn_2 == cur_locParam_0_0,
+            c0_valReturn_2 == c0_valParam_0_0),
+    Implies(cur_locReturn_2 == cur_locParam_0_1,
+            c0_valReturn_2 == c0_valParam_0_1),
+    Implies(cur_locReturn_2 == cur_locReturn_0,
+            c0_valReturn_2 == c0_valReturn_0),
+    Implies(cur_locReturn_2 == cur_locParam_1_0,
+            c0_valReturn_2 == c0_valParam_1_0),
+    Implies(cur_locReturn_2 == cur_locParam_1_1,
+            c0_valReturn_2 == c0_valParam_1_1),
+    Implies(cur_locReturn_2 == cur_locReturn_1,
+            c0_valReturn_2 == c0_valReturn_1),
+    Implies(cur_locReturn_2 == cur_locParam_2_0,
+            c0_valReturn_2 == c0_valParam_2_0),
+    Implies(cur_locParam_3_0 == cur_locInput_0,
+            c0_valParam_3_0 == c0_valInput_0),
+    Implies(cur_locParam_3_0 == cur_locOutput,
+            c0_valParam_3_0 == c0_valOutput),
+    Implies(cur_locParam_3_0 == cur_locParam_0_0,
+            c0_valParam_3_0 == c0_valParam_0_0),
+    Implies(cur_locParam_3_0 == cur_locParam_0_1,
+            c0_valParam_3_0 == c0_valParam_0_1),
+    Implies(cur_locParam_3_0 == cur_locReturn_0,
+            c0_valParam_3_0 == c0_valReturn_0),
+    Implies(cur_locParam_3_0 == cur_locParam_1_0,
+            c0_valParam_3_0 == c0_valParam_1_0),
+    Implies(cur_locParam_3_0 == cur_locParam_1_1,
+            c0_valParam_3_0 == c0_valParam_1_1),
+    Implies(cur_locParam_3_0 == cur_locReturn_1,
+            c0_valParam_3_0 == c0_valReturn_1),
+    Implies(cur_locParam_3_0 == cur_locParam_2_0,
+            c0_valParam_3_0 == c0_valParam_2_0),
+    Implies(cur_locParam_3_0 == cur_locReturn_2,
+            c0_valParam_3_0 == c0_valReturn_2),
+    Implies(cur_locReturn_3 == cur_locInput_0,
+            c0_valReturn_3 == c0_valInput_0),
+    Implies(cur_locReturn_3 == cur_locOutput,
+            c0_valReturn_3 == c0_valOutput),
+    Implies(cur_locReturn_3 == cur_locParam_0_0,
+            c0_valReturn_3 == c0_valParam_0_0),
+    Implies(cur_locReturn_3 == cur_locParam_0_1,
+            c0_valReturn_3 == c0_valParam_0_1),
+    Implies(cur_locReturn_3 == cur_locReturn_0,
+            c0_valReturn_3 == c0_valReturn_0),
+    Implies(cur_locReturn_3 == cur_locParam_1_0,
+            c0_valReturn_3 == c0_valParam_1_0),
+    Implies(cur_locReturn_3 == cur_locParam_1_1,
+            c0_valReturn_3 == c0_valParam_1_1),
+    Implies(cur_locReturn_3 == cur_locReturn_1,
+            c0_valReturn_3 == c0_valReturn_1),
+    Implies(cur_locReturn_3 == cur_locParam_2_0,
+            c0_valReturn_3 == c0_valParam_2_0),
+    Implies(cur_locReturn_3 == cur_locReturn_2,
+            c0_valReturn_3 == c0_valReturn_2),
+    Implies(cur_locReturn_3 == cur_locParam_3_0,
+            c0_valReturn_3 == c0_valParam_3_0),
+    Implies(cur_locParam_4_0 == cur_locInput_0,
+            c0_valParam_4_0 == c0_valInput_0),
+    Implies(cur_locParam_4_0 == cur_locOutput,
+            c0_valParam_4_0 == c0_valOutput),
+    Implies(cur_locParam_4_0 == cur_locParam_0_0,
+            c0_valParam_4_0 == c0_valParam_0_0),
+    Implies(cur_locParam_4_0 == cur_locParam_0_1,
+            c0_valParam_4_0 == c0_valParam_0_1),
+    Implies(cur_locParam_4_0 == cur_locReturn_0,
+            c0_valParam_4_0 == c0_valReturn_0),
+    Implies(cur_locParam_4_0 == cur_locParam_1_0,
+            c0_valParam_4_0 == c0_valParam_1_0),
+    Implies(cur_locParam_4_0 == cur_locParam_1_1,
+            c0_valParam_4_0 == c0_valParam_1_1),
+    Implies(cur_locParam_4_0 == cur_locReturn_1,
+            c0_valParam_4_0 == c0_valReturn_1),
+    Implies(cur_locParam_4_0 == cur_locParam_2_0,
+            c0_valParam_4_0 == c0_valParam_2_0),
+    Implies(cur_locParam_4_0 == cur_locReturn_2,
+            c0_valParam_4_0 == c0_valReturn_2),
+    Implies(cur_locParam_4_0 == cur_locParam_3_0,
+            c0_valParam_4_0 == c0_valParam_3_0),
+    Implies(cur_locParam_4_0 == cur_locReturn_3,
+            c0_valParam_4_0 == c0_valReturn_3),
+    Implies(cur_locParam_4_1 == cur_locInput_0,
+            c0_valParam_4_1 == c0_valInput_0),
+    Implies(cur_locParam_4_1 == cur_locOutput,
+            c0_valParam_4_1 == c0_valOutput),
+    Implies(cur_locParam_4_1 == cur_locParam_0_0,
+            c0_valParam_4_1 == c0_valParam_0_0),
+    Implies(cur_locParam_4_1 == cur_locParam_0_1,
+            c0_valParam_4_1 == c0_valParam_0_1),
+    Implies(cur_locParam_4_1 == cur_locReturn_0,
+            c0_valParam_4_1 == c0_valReturn_0),
+    Implies(cur_locParam_4_1 == cur_locParam_1_0,
+            c0_valParam_4_1 == c0_valParam_1_0),
+    Implies(cur_locParam_4_1 == cur_locParam_1_1,
+            c0_valParam_4_1 == c0_valParam_1_1),
+    Implies(cur_locParam_4_1 == cur_locReturn_1,
+            c0_valParam_4_1 == c0_valReturn_1),
+    Implies(cur_locParam_4_1 == cur_locParam_2_0,
+            c0_valParam_4_1 == c0_valParam_2_0),
+    Implies(cur_locParam_4_1 == cur_locReturn_2,
+            c0_valParam_4_1 == c0_valReturn_2),
+    Implies(cur_locParam_4_1 == cur_locParam_3_0,
+            c0_valParam_4_1 == c0_valParam_3_0),
+    Implies(cur_locParam_4_1 == cur_locReturn_3,
+            c0_valParam_4_1 == c0_valReturn_3),
+    Implies(cur_locParam_4_1 == cur_locParam_4_0,
+            c0_valParam_4_1 == c0_valParam_4_0),
+    Implies(cur_locReturn_4 == cur_locInput_0,
+            c0_valReturn_4 == c0_valInput_0),
+    Implies(cur_locReturn_4 == cur_locOutput,
+            c0_valReturn_4 == c0_valOutput),
+    Implies(cur_locReturn_4 == cur_locParam_0_0,
+            c0_valReturn_4 == c0_valParam_0_0),
+    Implies(cur_locReturn_4 == cur_locParam_0_1,
+            c0_valReturn_4 == c0_valParam_0_1),
+    Implies(cur_locReturn_4 == cur_locReturn_0,
+            c0_valReturn_4 == c0_valReturn_0),
+    Implies(cur_locReturn_4 == cur_locParam_1_0,
+            c0_valReturn_4 == c0_valParam_1_0),
+    Implies(cur_locReturn_4 == cur_locParam_1_1,
+            c0_valReturn_4 == c0_valParam_1_1),
+    Implies(cur_locReturn_4 == cur_locReturn_1,
+            c0_valReturn_4 == c0_valReturn_1),
+    Implies(cur_locReturn_4 == cur_locParam_2_0,
+            c0_valReturn_4 == c0_valParam_2_0),
+...
+
+
+
+synthesizer adding spec:
+c0_valOutput == c0_valInput_0 | c0_valInput_0 + 1
+
+
+
+add new... to verifier:
+
+
+verifier adding new_cons:
+0 == c0_valInput_0
+> Running iteration 1 ...
+
+
+
+syn_model in iteration  1 :
+
+[c0_valParam_10_1 = 1,
+ cur_locInput_0 = 0,
+ cur_locReturn_1 = 6,
+ cur_locParam_1_1 = 1,
+ cur_locParam_0_0 = 8,
+ c0_valInput_0 = 0,
+ cur_locParam_5_1 = 4,
+ cur_locReturn_10 = 8,
+ c0_valParam_3_0 = 0,
+ cur_locReturn_9 = 4,
+ c0_valParam_1_1 = 0,
+ c0_valParam_5_1 = 0,
+ c0_valReturn_0 = 1,
+ c0_valReturn_3 = 4294967295,
+ cur_locParam_7_1 = 1,
+ cur_locParam_11_0 = 10,
+ cur_locOutput = 9,
+ c0_valReturn_7 = 0,
+ cur_locParam_10_1 = 7,
+ cur_locParam_11_1 = 0,
+ c0_valReturn_2 = 1,
+ c0_valOutput = 1,
+ cur_locParam_4_1 = 2,
+ c0_valParam_7_1 = 0,
+ c0_valParam_4_0 = 0,
+ c0_valReturn_6 = 4294967294,
+ c0_valReturn_5 = 1,
+ cur_locParam_3_0 = 11,
+ c0_valReturn_4 = 0,
+ cur_locParam_4_0 = 0,
+ c0_valReturn_9 = 0,
+ c0_valParam_4_1 = 0,
+ c0_valParam_6_0 = 1,
+ cur_locParam_1_0 = 5,
+ cur_locReturn_4 = 3,
+ cur_locReturn_11 = 11,
+ cur_locParam_6_0 = 9,
+ cur_locParam_9_0 = 2,
+ cur_locReturn_3 = 12,
+ c0_valParam_8_0 = 0,
+ cur_locParam_0_1 = 6,
+ cur_locReturn_8 = 1,
+ c0_valParam_1_0 = 1,
+ c0_valParam_10_0 = 0,
+ c0_valParam_11_0 = 4294967294,
+ cur_locParam_7_0 = 1,
+ cur_locParam_5_0 = 5,
+ cur_locParam_10_0 = 2,
+ c0_valParam_0_0 = 0,
+ c0_valParam_9_0 = 0,
+ c0_valParam_11_1 = 0,
+ c0_valReturn_1 = 1,
+ cur_locParam_8_0 = 0,
+ cur_locReturn_0 = 9,
+ cur_locReturn_2 = 5,
+ c0_valParam_2_0 = 0,
+ c0_valReturn_8 = 0,
+ cur_locReturn_7 = 2,
+ c0_valParam_5_0 = 1,
+ c0_valReturn_10 = 0,
+ cur_locReturn_6 = 10,
+ cur_locReturn_5 = 7,
+ c0_valParam_7_0 = 0,
+ c0_valReturn_11 = 0,
+ cur_locParam_2_0 = 4,
+ c0_valParam_0_1 = 1]
+
+
+
+add lInput to verifier:
+0 == cur_locInput_0
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+8 == cur_locParam_0_0
+
+
+
+add lparams to verifier:
+6 == cur_locParam_0_1
+
+
+
+add lRet to verifier:
+9 == cur_locReturn_0
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+5 == cur_locParam_1_0
+
+
+
+add lparams to verifier:
+1 == cur_locParam_1_1
+
+
+
+add lRet to verifier:
+6 == cur_locReturn_1
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+4 == cur_locParam_2_0
+
+
+
+add lRet to verifier:
+5 == cur_locReturn_2
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+11 == cur_locParam_3_0
+
+
+
+add lRet to verifier:
+12 == cur_locReturn_3
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+0 == cur_locParam_4_0
+
+
+
+add lparams to verifier:
+2 == cur_locParam_4_1
+
+
+
+add lRet to verifier:
+3 == cur_locReturn_4
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+5 == cur_locParam_5_0
+
+
+
+add lparams to verifier:
+4 == cur_locParam_5_1
+
+
+
+add lRet to verifier:
+7 == cur_locReturn_5
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+9 == cur_locParam_6_0
+
+
+
+add lRet to verifier:
+10 == cur_locReturn_6
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+1 == cur_locParam_7_0
+
+
+
+add lparams to verifier:
+1 == cur_locParam_7_1
+
+
+
+add lRet to verifier:
+2 == cur_locReturn_7
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+0 == cur_locParam_8_0
+
+
+
+add lRet to verifier:
+1 == cur_locReturn_8
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+2 == cur_locParam_9_0
+
+
+
+add lRet to verifier:
+4 == cur_locReturn_9
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+2 == cur_locParam_10_0
+
+
+
+add lparams to verifier:
+7 == cur_locParam_10_1
+
+
+
+add lRet to verifier:
+8 == cur_locReturn_10
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+10 == cur_locParam_11_0
+
+
+
+add lparams to verifier:
+0 == cur_locParam_11_1
+
+
+
+add lRet to verifier:
+11 == cur_locReturn_11
+
+
+
+add lOutput to verifier:
+9 == cur_locOutput
+
+
+
+ver_model in iteration  1 :
+
+[ctr_valParam_10_1 = 1,
+ ctr_valReturn_2 = 1,
+ cur_locInput_0 = 0,
+ cur_locParam_1_1 = 1,
+ cur_locReturn_1 = 6,
+ ctr_valReturn_8 = 0,
+ cur_locParam_0_0 = 8,
+ ctr_valParam_9_0 = 0,
+ ctr_valReturn_10 = 0,
+ cur_locParam_5_1 = 4,
+ cur_locReturn_10 = 8,
+ cur_locReturn_9 = 4,
+ ctr_valParam_10_0 = 0,
+ cur_locOutput = 9,
+ ctr_valParam_0_0 = 0,
+ ctr_valParam_7_0 = 0,
+ cur_locParam_7_1 = 1,
+ cur_locParam_10_1 = 7,
+ cur_locParam_11_0 = 10,
+ ctr_valReturn_5 = 1,
+ ctr_valInput_0 = 1,
+ ctr_valParam_2_0 = 0,
+ cur_locParam_4_1 = 2,
+ cur_locParam_11_1 = 0,
+ ctr_valReturn_0 = 1,
+ cur_locParam_3_0 = 11,
+ ctr_valParam_1_0 = 1,
+ cur_locParam_4_0 = 0,
+ ctr_valParam_8_0 = 1,
+ cur_locParam_1_0 = 5,
+ cur_locParam_6_0 = 9,
+ cur_locReturn_3 = 12,
+ cur_locReturn_4 = 3,
+ cur_locParam_9_0 = 2,
+ cur_locReturn_11 = 11,
+ cur_locParam_0_1 = 6,
+ cur_locReturn_8 = 1,
+ ctr_valReturn_9 = 0,
+ ctr_valReturn_4 = 0,
+ ctr_valParam_5_0 = 1,
+ ctr_valParam_6_0 = 1,
+ ctr_valReturn_7 = 0,
+ ctr_valParam_11_0 = 4294967294,
+ ctr_valParam_3_0 = 0,
+ cur_locParam_7_0 = 1,
+ cur_locParam_5_0 = 5,
+ ctr_valOutput = 1,
+ ctr_valReturn_6 = 4294967294,
+ cur_locParam_10_0 = 2,
+ ctr_valReturn_3 = 4294967295,
+ cur_locParam_8_0 = 0,
+ ctr_valParam_4_1 = 0,
+ ctr_valParam_0_1 = 1,
+ cur_locReturn_0 = 9,
+ cur_locReturn_2 = 5,
+ ctr_valReturn_1 = 1,
+ cur_locReturn_7 = 2,
+ ctr_valParam_7_1 = 0,
+ cur_locReturn_6 = 10,
+ cur_locReturn_5 = 7,
+ ctr_valParam_4_0 = 1,
+ ctr_valParam_1_1 = 0,
+ ctr_valReturn_11 = 0,
+ ctr_valParam_11_1 = 1,
+ ctr_valParam_5_1 = 0,
+ cur_locParam_2_0 = 4]
+
+
+
+add lib_cons to synthesizer:
+And(c1_valReturn_0 == c1_valParam_0_0 + c1_valParam_0_1,
+    c1_valReturn_1 == c1_valParam_1_0 - c1_valParam_1_1,
+    c1_valReturn_2 == c1_valParam_2_0 + 1,
+    c1_valReturn_3 == c1_valParam_3_0 - 1,
+    c1_valReturn_4 == c1_valParam_4_0 & c1_valParam_4_1,
+    c1_valReturn_5 == c1_valParam_5_0 | c1_valParam_5_1,
+    c1_valReturn_6 == ~c1_valParam_6_0,
+    c1_valReturn_7 == c1_valParam_7_0 ^ c1_valParam_7_1,
+    c1_valReturn_8 == c1_valParam_8_0 >> 31,
+    c1_valReturn_9 == -(c1_valParam_9_0 >> 31),
+    c1_valReturn_10 ==
+    If(UGT(c1_valParam_10_0, c1_valParam_10_1),
+       4294967295,
+       0),
+    c1_valReturn_11 ==
+    If(ULE(c1_valParam_11_0, c1_valParam_11_1),
+       4294967295,
+       0))
+
+
+
+add conn_cons to synthesizer:
+And(Implies(cur_locOutput == cur_locInput_0,
+            c1_valOutput == c1_valInput_0),
+    Implies(cur_locParam_0_0 == cur_locInput_0,
+            c1_valParam_0_0 == c1_valInput_0),
+    Implies(cur_locParam_0_0 == cur_locOutput,
+            c1_valParam_0_0 == c1_valOutput),
+    Implies(cur_locParam_0_1 == cur_locInput_0,
+            c1_valParam_0_1 == c1_valInput_0),
+    Implies(cur_locParam_0_1 == cur_locOutput,
+            c1_valParam_0_1 == c1_valOutput),
+    Implies(cur_locParam_0_1 == cur_locParam_0_0,
+            c1_valParam_0_1 == c1_valParam_0_0),
+    Implies(cur_locReturn_0 == cur_locInput_0,
+            c1_valReturn_0 == c1_valInput_0),
+    Implies(cur_locReturn_0 == cur_locOutput,
+            c1_valReturn_0 == c1_valOutput),
+    Implies(cur_locReturn_0 == cur_locParam_0_0,
+            c1_valReturn_0 == c1_valParam_0_0),
+    Implies(cur_locReturn_0 == cur_locParam_0_1,
+            c1_valReturn_0 == c1_valParam_0_1),
+    Implies(cur_locParam_1_0 == cur_locInput_0,
+            c1_valParam_1_0 == c1_valInput_0),
+    Implies(cur_locParam_1_0 == cur_locOutput,
+            c1_valParam_1_0 == c1_valOutput),
+    Implies(cur_locParam_1_0 == cur_locParam_0_0,
+            c1_valParam_1_0 == c1_valParam_0_0),
+    Implies(cur_locParam_1_0 == cur_locParam_0_1,
+            c1_valParam_1_0 == c1_valParam_0_1),
+    Implies(cur_locParam_1_0 == cur_locReturn_0,
+            c1_valParam_1_0 == c1_valReturn_0),
+    Implies(cur_locParam_1_1 == cur_locInput_0,
+            c1_valParam_1_1 == c1_valInput_0),
+    Implies(cur_locParam_1_1 == cur_locOutput,
+            c1_valParam_1_1 == c1_valOutput),
+    Implies(cur_locParam_1_1 == cur_locParam_0_0,
+            c1_valParam_1_1 == c1_valParam_0_0),
+    Implies(cur_locParam_1_1 == cur_locParam_0_1,
+            c1_valParam_1_1 == c1_valParam_0_1),
+    Implies(cur_locParam_1_1 == cur_locReturn_0,
+            c1_valParam_1_1 == c1_valReturn_0),
+    Implies(cur_locParam_1_1 == cur_locParam_1_0,
+            c1_valParam_1_1 == c1_valParam_1_0),
+    Implies(cur_locReturn_1 == cur_locInput_0,
+            c1_valReturn_1 == c1_valInput_0),
+    Implies(cur_locReturn_1 == cur_locOutput,
+            c1_valReturn_1 == c1_valOutput),
+    Implies(cur_locReturn_1 == cur_locParam_0_0,
+            c1_valReturn_1 == c1_valParam_0_0),
+    Implies(cur_locReturn_1 == cur_locParam_0_1,
+            c1_valReturn_1 == c1_valParam_0_1),
+    Implies(cur_locReturn_1 == cur_locReturn_0,
+            c1_valReturn_1 == c1_valReturn_0),
+    Implies(cur_locReturn_1 == cur_locParam_1_0,
+            c1_valReturn_1 == c1_valParam_1_0),
+    Implies(cur_locReturn_1 == cur_locParam_1_1,
+            c1_valReturn_1 == c1_valParam_1_1),
+    Implies(cur_locParam_2_0 == cur_locInput_0,
+            c1_valParam_2_0 == c1_valInput_0),
+    Implies(cur_locParam_2_0 == cur_locOutput,
+            c1_valParam_2_0 == c1_valOutput),
+    Implies(cur_locParam_2_0 == cur_locParam_0_0,
+            c1_valParam_2_0 == c1_valParam_0_0),
+    Implies(cur_locParam_2_0 == cur_locParam_0_1,
+            c1_valParam_2_0 == c1_valParam_0_1),
+    Implies(cur_locParam_2_0 == cur_locReturn_0,
+            c1_valParam_2_0 == c1_valReturn_0),
+    Implies(cur_locParam_2_0 == cur_locParam_1_0,
+            c1_valParam_2_0 == c1_valParam_1_0),
+    Implies(cur_locParam_2_0 == cur_locParam_1_1,
+            c1_valParam_2_0 == c1_valParam_1_1),
+    Implies(cur_locParam_2_0 == cur_locReturn_1,
+            c1_valParam_2_0 == c1_valReturn_1),
+    Implies(cur_locReturn_2 == cur_locInput_0,
+            c1_valReturn_2 == c1_valInput_0),
+    Implies(cur_locReturn_2 == cur_locOutput,
+            c1_valReturn_2 == c1_valOutput),
+    Implies(cur_locReturn_2 == cur_locParam_0_0,
+            c1_valReturn_2 == c1_valParam_0_0),
+    Implies(cur_locReturn_2 == cur_locParam_0_1,
+            c1_valReturn_2 == c1_valParam_0_1),
+    Implies(cur_locReturn_2 == cur_locReturn_0,
+            c1_valReturn_2 == c1_valReturn_0),
+    Implies(cur_locReturn_2 == cur_locParam_1_0,
+            c1_valReturn_2 == c1_valParam_1_0),
+    Implies(cur_locReturn_2 == cur_locParam_1_1,
+            c1_valReturn_2 == c1_valParam_1_1),
+    Implies(cur_locReturn_2 == cur_locReturn_1,
+            c1_valReturn_2 == c1_valReturn_1),
+    Implies(cur_locReturn_2 == cur_locParam_2_0,
+            c1_valReturn_2 == c1_valParam_2_0),
+    Implies(cur_locParam_3_0 == cur_locInput_0,
+            c1_valParam_3_0 == c1_valInput_0),
+    Implies(cur_locParam_3_0 == cur_locOutput,
+            c1_valParam_3_0 == c1_valOutput),
+    Implies(cur_locParam_3_0 == cur_locParam_0_0,
+            c1_valParam_3_0 == c1_valParam_0_0),
+    Implies(cur_locParam_3_0 == cur_locParam_0_1,
+            c1_valParam_3_0 == c1_valParam_0_1),
+    Implies(cur_locParam_3_0 == cur_locReturn_0,
+            c1_valParam_3_0 == c1_valReturn_0),
+    Implies(cur_locParam_3_0 == cur_locParam_1_0,
+            c1_valParam_3_0 == c1_valParam_1_0),
+    Implies(cur_locParam_3_0 == cur_locParam_1_1,
+            c1_valParam_3_0 == c1_valParam_1_1),
+    Implies(cur_locParam_3_0 == cur_locReturn_1,
+            c1_valParam_3_0 == c1_valReturn_1),
+    Implies(cur_locParam_3_0 == cur_locParam_2_0,
+            c1_valParam_3_0 == c1_valParam_2_0),
+    Implies(cur_locParam_3_0 == cur_locReturn_2,
+            c1_valParam_3_0 == c1_valReturn_2),
+    Implies(cur_locReturn_3 == cur_locInput_0,
+            c1_valReturn_3 == c1_valInput_0),
+    Implies(cur_locReturn_3 == cur_locOutput,
+            c1_valReturn_3 == c1_valOutput),
+    Implies(cur_locReturn_3 == cur_locParam_0_0,
+            c1_valReturn_3 == c1_valParam_0_0),
+    Implies(cur_locReturn_3 == cur_locParam_0_1,
+            c1_valReturn_3 == c1_valParam_0_1),
+    Implies(cur_locReturn_3 == cur_locReturn_0,
+            c1_valReturn_3 == c1_valReturn_0),
+    Implies(cur_locReturn_3 == cur_locParam_1_0,
+            c1_valReturn_3 == c1_valParam_1_0),
+    Implies(cur_locReturn_3 == cur_locParam_1_1,
+            c1_valReturn_3 == c1_valParam_1_1),
+    Implies(cur_locReturn_3 == cur_locReturn_1,
+            c1_valReturn_3 == c1_valReturn_1),
+    Implies(cur_locReturn_3 == cur_locParam_2_0,
+            c1_valReturn_3 == c1_valParam_2_0),
+    Implies(cur_locReturn_3 == cur_locReturn_2,
+            c1_valReturn_3 == c1_valReturn_2),
+    Implies(cur_locReturn_3 == cur_locParam_3_0,
+            c1_valReturn_3 == c1_valParam_3_0),
+    Implies(cur_locParam_4_0 == cur_locInput_0,
+            c1_valParam_4_0 == c1_valInput_0),
+    Implies(cur_locParam_4_0 == cur_locOutput,
+            c1_valParam_4_0 == c1_valOutput),
+    Implies(cur_locParam_4_0 == cur_locParam_0_0,
+            c1_valParam_4_0 == c1_valParam_0_0),
+    Implies(cur_locParam_4_0 == cur_locParam_0_1,
+            c1_valParam_4_0 == c1_valParam_0_1),
+    Implies(cur_locParam_4_0 == cur_locReturn_0,
+            c1_valParam_4_0 == c1_valReturn_0),
+    Implies(cur_locParam_4_0 == cur_locParam_1_0,
+            c1_valParam_4_0 == c1_valParam_1_0),
+    Implies(cur_locParam_4_0 == cur_locParam_1_1,
+            c1_valParam_4_0 == c1_valParam_1_1),
+    Implies(cur_locParam_4_0 == cur_locReturn_1,
+            c1_valParam_4_0 == c1_valReturn_1),
+    Implies(cur_locParam_4_0 == cur_locParam_2_0,
+            c1_valParam_4_0 == c1_valParam_2_0),
+    Implies(cur_locParam_4_0 == cur_locReturn_2,
+            c1_valParam_4_0 == c1_valReturn_2),
+    Implies(cur_locParam_4_0 == cur_locParam_3_0,
+            c1_valParam_4_0 == c1_valParam_3_0),
+    Implies(cur_locParam_4_0 == cur_locReturn_3,
+            c1_valParam_4_0 == c1_valReturn_3),
+    Implies(cur_locParam_4_1 == cur_locInput_0,
+            c1_valParam_4_1 == c1_valInput_0),
+    Implies(cur_locParam_4_1 == cur_locOutput,
+            c1_valParam_4_1 == c1_valOutput),
+    Implies(cur_locParam_4_1 == cur_locParam_0_0,
+            c1_valParam_4_1 == c1_valParam_0_0),
+    Implies(cur_locParam_4_1 == cur_locParam_0_1,
+            c1_valParam_4_1 == c1_valParam_0_1),
+    Implies(cur_locParam_4_1 == cur_locReturn_0,
+            c1_valParam_4_1 == c1_valReturn_0),
+    Implies(cur_locParam_4_1 == cur_locParam_1_0,
+            c1_valParam_4_1 == c1_valParam_1_0),
+    Implies(cur_locParam_4_1 == cur_locParam_1_1,
+            c1_valParam_4_1 == c1_valParam_1_1),
+    Implies(cur_locParam_4_1 == cur_locReturn_1,
+            c1_valParam_4_1 == c1_valReturn_1),
+    Implies(cur_locParam_4_1 == cur_locParam_2_0,
+            c1_valParam_4_1 == c1_valParam_2_0),
+    Implies(cur_locParam_4_1 == cur_locReturn_2,
+            c1_valParam_4_1 == c1_valReturn_2),
+    Implies(cur_locParam_4_1 == cur_locParam_3_0,
+            c1_valParam_4_1 == c1_valParam_3_0),
+    Implies(cur_locParam_4_1 == cur_locReturn_3,
+            c1_valParam_4_1 == c1_valReturn_3),
+    Implies(cur_locParam_4_1 == cur_locParam_4_0,
+            c1_valParam_4_1 == c1_valParam_4_0),
+    Implies(cur_locReturn_4 == cur_locInput_0,
+            c1_valReturn_4 == c1_valInput_0),
+    Implies(cur_locReturn_4 == cur_locOutput,
+            c1_valReturn_4 == c1_valOutput),
+    Implies(cur_locReturn_4 == cur_locParam_0_0,
+            c1_valReturn_4 == c1_valParam_0_0),
+    Implies(cur_locReturn_4 == cur_locParam_0_1,
+            c1_valReturn_4 == c1_valParam_0_1),
+    Implies(cur_locReturn_4 == cur_locReturn_0,
+            c1_valReturn_4 == c1_valReturn_0),
+    Implies(cur_locReturn_4 == cur_locParam_1_0,
+            c1_valReturn_4 == c1_valParam_1_0),
+    Implies(cur_locReturn_4 == cur_locParam_1_1,
+            c1_valReturn_4 == c1_valParam_1_1),
+    Implies(cur_locReturn_4 == cur_locReturn_1,
+            c1_valReturn_4 == c1_valReturn_1),
+    Implies(cur_locReturn_4 == cur_locParam_2_0,
+            c1_valReturn_4 == c1_valParam_2_0),
+...
+
+
+
+synthesizer adding spec:
+c1_valOutput == c1_valInput_0 | c1_valInput_0 + 1
+
+
+
+add new... to verifier:
+
+
+verifier adding new_cons:
+1 == c1_valInput_0
+> Running iteration 2 ...
+
+
+
+syn_model in iteration  2 :
+
+[cur_locReturn_1 = 5,
+ c0_valInput_0 = 0,
+ c1_valParam_1_1 = 0,
+ cur_locReturn_10 = 8,
+ c0_valParam_1_1 = 0,
+ c1_valReturn_9 = 0,
+ c1_valParam_10_0 = 3,
+ c0_valReturn_0 = 4294967295,
+ cur_locParam_11_0 = 0,
+ c1_valReturn_4 = 0,
+ c0_valOutput = 1,
+ c0_valReturn_2 = 1,
+ c0_valParam_7_1 = 0,
+ c0_valReturn_5 = 0,
+ c0_valReturn_4 = 0,
+ c0_valParam_4_1 = 1,
+ cur_locReturn_4 = 4,
+ c1_valParam_0_1 = 1,
+ c1_valReturn_6 = 4294967295,
+ c1_valInput_0 = 1,
+ c0_valParam_8_0 = 1,
+ c1_valParam_1_0 = 0,
+ cur_locParam_0_1 = 0,
+ c1_valParam_5_0 = 0,
+ c1_valParam_6_0 = 0,
+ c0_valParam_10_0 = 1,
+ c0_valParam_11_0 = 0,
+ c0_valParam_0_0 = 4294967295,
+ cur_locParam_5_0 = 6,
+ cur_locParam_10_0 = 3,
+ c0_valParam_9_0 = 0,
+ c1_valParam_2_0 = 1,
+ c0_valReturn_1 = 0,
+ cur_locReturn_0 = 9,
+ cur_locReturn_2 = 1,
+ c0_valParam_2_0 = 0,
+ c0_valReturn_10 = 4294967295,
+ cur_locReturn_6 = 10,
+ c1_valReturn_10 = 4294967295,
+ cur_locReturn_5 = 7,
+ c0_valParam_7_0 = 1,
+ c1_valParam_11_0 = 1,
+ c1_valParam_11_1 = 4294967295,
+ cur_locParam_2_0 = 0,
+ c1_valParam_3_0 = 0,
+ c0_valParam_10_1 = 0,
+ c1_valParam_10_1 = 0,
+ cur_locInput_0 = 0,
+ c1_valParam_4_0 = 0,
+ cur_locParam_1_1 = 4,
+ cur_locParam_0_0 = 8,
+ cur_locParam_5_1 = 0,
+ c0_valParam_3_0 = 0,
+ cur_locReturn_9 = 6,
+ c0_valParam_5_1 = 0,
+ c1_valParam_7_0 = 2,
+ c1_valParam_8_0 = 2,
+ c0_valReturn_3 = 4294967295,
+ cur_locParam_7_1 = 0,
+ cur_locOutput = 3,
+ c0_valReturn_7 = 1,
+ cur_locParam_10_1 = 6,
+ cur_locParam_11_1 = 10,
+ cur_locParam_4_1 = 1,
+ c0_valParam_4_0 = 0,
+ c0_valReturn_6 = 0,
+ cur_locParam_3_0 = 6,
+ c1_valReturn_8 = 0,
+ cur_locParam_4_0 = 2,
+ c0_valReturn_9 = 0,
+ c1_valReturn_2 = 2,
+ c0_valParam_6_0 = 4294967295,
+ c1_valReturn_11 = 4294967295,
+ cur_locParam_1_0 = 4,
+ cur_locParam_6_0 = 9,
+ cur_locReturn_11 = 11,
+ cur_locParam_9_0 = 5,
+ cur_locReturn_3 = 12,
+ c1_valReturn_5 = 1,
+ c1_valReturn_1 = 0,
+ cur_locReturn_8 = 2,
+ c0_valParam_1_0 = 0,
+ c1_valParam_0_0 = 4294967295,
+ c1_valReturn_3 = 4294967295,
+ c1_valOutput = 3,
+ c0_valParam_11_1 = 0,
+ cur_locParam_7_0 = 1,
+ c1_valParam_5_1 = 1,
+ cur_locParam_8_0 = 1,
+ c1_valParam_4_1 = 2,
+ c1_valParam_9_0 = 0,
+ c1_valParam_7_1 = 1,
+ c0_valReturn_8 = 0,
+ cur_locReturn_7 = 3,
+ c0_valParam_5_0 = 0,
+ c1_valReturn_0 = 0,
+ c1_valReturn_7 = 3,
+ c0_valReturn_11 = 4294967295,
+ c0_valParam_0_1 = 0]
+
+
+
+add lInput to verifier:
+0 == cur_locInput_0
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+8 == cur_locParam_0_0
+
+
+
+add lparams to verifier:
+0 == cur_locParam_0_1
+
+
+
+add lRet to verifier:
+9 == cur_locReturn_0
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+4 == cur_locParam_1_0
+
+
+
+add lparams to verifier:
+4 == cur_locParam_1_1
+
+
+
+add lRet to verifier:
+5 == cur_locReturn_1
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+0 == cur_locParam_2_0
+
+
+
+add lRet to verifier:
+1 == cur_locReturn_2
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+6 == cur_locParam_3_0
+
+
+
+add lRet to verifier:
+12 == cur_locReturn_3
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+2 == cur_locParam_4_0
+
+
+
+add lparams to verifier:
+1 == cur_locParam_4_1
+
+
+
+add lRet to verifier:
+4 == cur_locReturn_4
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+6 == cur_locParam_5_0
+
+
+
+add lparams to verifier:
+0 == cur_locParam_5_1
+
+
+
+add lRet to verifier:
+7 == cur_locReturn_5
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+9 == cur_locParam_6_0
+
+
+
+add lRet to verifier:
+10 == cur_locReturn_6
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+1 == cur_locParam_7_0
+
+
+
+add lparams to verifier:
+0 == cur_locParam_7_1
+
+
+
+add lRet to verifier:
+3 == cur_locReturn_7
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+1 == cur_locParam_8_0
+
+
+
+add lRet to verifier:
+2 == cur_locReturn_8
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+5 == cur_locParam_9_0
+
+
+
+add lRet to verifier:
+6 == cur_locReturn_9
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+3 == cur_locParam_10_0
+
+
+
+add lparams to verifier:
+6 == cur_locParam_10_1
+
+
+
+add lRet to verifier:
+8 == cur_locReturn_10
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+0 == cur_locParam_11_0
+
+
+
+add lparams to verifier:
+10 == cur_locParam_11_1
+
+
+
+add lRet to verifier:
+11 == cur_locReturn_11
+
+
+
+add lOutput to verifier:
+3 == cur_locOutput
+
+
+
+ver_model in iteration  2 :
+
+[ctr_valParam_10_1 = 0,
+ ctr_valReturn_2 = 536936451,
+ cur_locInput_0 = 0,
+ cur_locParam_1_1 = 4,
+ cur_locReturn_1 = 5,
+ ctr_valReturn_8 = 0,
+ cur_locParam_0_0 = 8,
+ ctr_valParam_9_0 = 0,
+ ctr_valReturn_10 = 4294967295,
+ cur_locParam_5_1 = 0,
+ cur_locReturn_10 = 8,
+ cur_locReturn_9 = 6,
+ ctr_valParam_10_0 = 1,
+ cur_locOutput = 3,
+ ctr_valParam_0_0 = 4294967295,
+ ctr_valParam_7_0 = 536936451,
+ cur_locParam_7_1 = 0,
+ cur_locParam_10_1 = 6,
+ cur_locParam_11_0 = 0,
+ ctr_valReturn_5 = 536936450,
+ ctr_valInput_0 = 536936450,
+ ctr_valParam_2_0 = 536936450,
+ cur_locParam_4_1 = 1,
+ cur_locParam_11_1 = 10,
+ ctr_valReturn_0 = 536936449,
+ cur_locParam_3_0 = 6,
+ ctr_valParam_1_0 = 0,
+ cur_locParam_4_0 = 2,
+ ctr_valParam_8_0 = 536936451,
+ cur_locParam_1_0 = 4,
+ cur_locParam_6_0 = 9,
+ cur_locReturn_3 = 12,
+ cur_locReturn_4 = 4,
+ cur_locParam_9_0 = 5,
+ cur_locReturn_11 = 11,
+ cur_locParam_0_1 = 0,
+ cur_locReturn_8 = 2,
+ ctr_valReturn_9 = 0,
+ ctr_valReturn_4 = 0,
+ ctr_valParam_5_0 = 0,
+ ctr_valParam_6_0 = 536936449,
+ ctr_valReturn_7 = 1,
+ ctr_valParam_11_0 = 536936450,
+ ctr_valParam_3_0 = 0,
+ cur_locParam_7_0 = 1,
+ cur_locParam_5_0 = 6,
+ ctr_valOutput = 1,
+ ctr_valReturn_6 = 3758030846,
+ cur_locParam_10_0 = 3,
+ ctr_valReturn_3 = 4294967295,
+ cur_locParam_8_0 = 1,
+ ctr_valParam_4_1 = 536936451,
+ ctr_valParam_0_1 = 536936450,
+ cur_locReturn_0 = 9,
+ cur_locReturn_2 = 1,
+ ctr_valReturn_1 = 0,
+ cur_locReturn_7 = 3,
+ ctr_valParam_7_1 = 536936450,
+ cur_locReturn_6 = 10,
+ cur_locReturn_5 = 7,
+ ctr_valParam_4_0 = 0,
+ ctr_valParam_1_1 = 0,
+ ctr_valReturn_11 = 4294967295,
+ ctr_valParam_11_1 = 3758030846,
+ ctr_valParam_5_1 = 536936450,
+ cur_locParam_2_0 = 0]
+
+
+
+add lib_cons to synthesizer:
+And(c2_valReturn_0 == c2_valParam_0_0 + c2_valParam_0_1,
+    c2_valReturn_1 == c2_valParam_1_0 - c2_valParam_1_1,
+    c2_valReturn_2 == c2_valParam_2_0 + 1,
+    c2_valReturn_3 == c2_valParam_3_0 - 1,
+    c2_valReturn_4 == c2_valParam_4_0 & c2_valParam_4_1,
+    c2_valReturn_5 == c2_valParam_5_0 | c2_valParam_5_1,
+    c2_valReturn_6 == ~c2_valParam_6_0,
+    c2_valReturn_7 == c2_valParam_7_0 ^ c2_valParam_7_1,
+    c2_valReturn_8 == c2_valParam_8_0 >> 31,
+    c2_valReturn_9 == -(c2_valParam_9_0 >> 31),
+    c2_valReturn_10 ==
+    If(UGT(c2_valParam_10_0, c2_valParam_10_1),
+       4294967295,
+       0),
+    c2_valReturn_11 ==
+    If(ULE(c2_valParam_11_0, c2_valParam_11_1),
+       4294967295,
+       0))
+
+
+
+add conn_cons to synthesizer:
+And(Implies(cur_locOutput == cur_locInput_0,
+            c2_valOutput == c2_valInput_0),
+    Implies(cur_locParam_0_0 == cur_locInput_0,
+            c2_valParam_0_0 == c2_valInput_0),
+    Implies(cur_locParam_0_0 == cur_locOutput,
+            c2_valParam_0_0 == c2_valOutput),
+    Implies(cur_locParam_0_1 == cur_locInput_0,
+            c2_valParam_0_1 == c2_valInput_0),
+    Implies(cur_locParam_0_1 == cur_locOutput,
+            c2_valParam_0_1 == c2_valOutput),
+    Implies(cur_locParam_0_1 == cur_locParam_0_0,
+            c2_valParam_0_1 == c2_valParam_0_0),
+    Implies(cur_locReturn_0 == cur_locInput_0,
+            c2_valReturn_0 == c2_valInput_0),
+    Implies(cur_locReturn_0 == cur_locOutput,
+            c2_valReturn_0 == c2_valOutput),
+    Implies(cur_locReturn_0 == cur_locParam_0_0,
+            c2_valReturn_0 == c2_valParam_0_0),
+    Implies(cur_locReturn_0 == cur_locParam_0_1,
+            c2_valReturn_0 == c2_valParam_0_1),
+    Implies(cur_locParam_1_0 == cur_locInput_0,
+            c2_valParam_1_0 == c2_valInput_0),
+    Implies(cur_locParam_1_0 == cur_locOutput,
+            c2_valParam_1_0 == c2_valOutput),
+    Implies(cur_locParam_1_0 == cur_locParam_0_0,
+            c2_valParam_1_0 == c2_valParam_0_0),
+    Implies(cur_locParam_1_0 == cur_locParam_0_1,
+            c2_valParam_1_0 == c2_valParam_0_1),
+    Implies(cur_locParam_1_0 == cur_locReturn_0,
+            c2_valParam_1_0 == c2_valReturn_0),
+    Implies(cur_locParam_1_1 == cur_locInput_0,
+            c2_valParam_1_1 == c2_valInput_0),
+    Implies(cur_locParam_1_1 == cur_locOutput,
+            c2_valParam_1_1 == c2_valOutput),
+    Implies(cur_locParam_1_1 == cur_locParam_0_0,
+            c2_valParam_1_1 == c2_valParam_0_0),
+    Implies(cur_locParam_1_1 == cur_locParam_0_1,
+            c2_valParam_1_1 == c2_valParam_0_1),
+    Implies(cur_locParam_1_1 == cur_locReturn_0,
+            c2_valParam_1_1 == c2_valReturn_0),
+    Implies(cur_locParam_1_1 == cur_locParam_1_0,
+            c2_valParam_1_1 == c2_valParam_1_0),
+    Implies(cur_locReturn_1 == cur_locInput_0,
+            c2_valReturn_1 == c2_valInput_0),
+    Implies(cur_locReturn_1 == cur_locOutput,
+            c2_valReturn_1 == c2_valOutput),
+    Implies(cur_locReturn_1 == cur_locParam_0_0,
+            c2_valReturn_1 == c2_valParam_0_0),
+    Implies(cur_locReturn_1 == cur_locParam_0_1,
+            c2_valReturn_1 == c2_valParam_0_1),
+    Implies(cur_locReturn_1 == cur_locReturn_0,
+            c2_valReturn_1 == c2_valReturn_0),
+    Implies(cur_locReturn_1 == cur_locParam_1_0,
+            c2_valReturn_1 == c2_valParam_1_0),
+    Implies(cur_locReturn_1 == cur_locParam_1_1,
+            c2_valReturn_1 == c2_valParam_1_1),
+    Implies(cur_locParam_2_0 == cur_locInput_0,
+            c2_valParam_2_0 == c2_valInput_0),
+    Implies(cur_locParam_2_0 == cur_locOutput,
+            c2_valParam_2_0 == c2_valOutput),
+    Implies(cur_locParam_2_0 == cur_locParam_0_0,
+            c2_valParam_2_0 == c2_valParam_0_0),
+    Implies(cur_locParam_2_0 == cur_locParam_0_1,
+            c2_valParam_2_0 == c2_valParam_0_1),
+    Implies(cur_locParam_2_0 == cur_locReturn_0,
+            c2_valParam_2_0 == c2_valReturn_0),
+    Implies(cur_locParam_2_0 == cur_locParam_1_0,
+            c2_valParam_2_0 == c2_valParam_1_0),
+    Implies(cur_locParam_2_0 == cur_locParam_1_1,
+            c2_valParam_2_0 == c2_valParam_1_1),
+    Implies(cur_locParam_2_0 == cur_locReturn_1,
+            c2_valParam_2_0 == c2_valReturn_1),
+    Implies(cur_locReturn_2 == cur_locInput_0,
+            c2_valReturn_2 == c2_valInput_0),
+    Implies(cur_locReturn_2 == cur_locOutput,
+            c2_valReturn_2 == c2_valOutput),
+    Implies(cur_locReturn_2 == cur_locParam_0_0,
+            c2_valReturn_2 == c2_valParam_0_0),
+    Implies(cur_locReturn_2 == cur_locParam_0_1,
+            c2_valReturn_2 == c2_valParam_0_1),
+    Implies(cur_locReturn_2 == cur_locReturn_0,
+            c2_valReturn_2 == c2_valReturn_0),
+    Implies(cur_locReturn_2 == cur_locParam_1_0,
+            c2_valReturn_2 == c2_valParam_1_0),
+    Implies(cur_locReturn_2 == cur_locParam_1_1,
+            c2_valReturn_2 == c2_valParam_1_1),
+    Implies(cur_locReturn_2 == cur_locReturn_1,
+            c2_valReturn_2 == c2_valReturn_1),
+    Implies(cur_locReturn_2 == cur_locParam_2_0,
+            c2_valReturn_2 == c2_valParam_2_0),
+    Implies(cur_locParam_3_0 == cur_locInput_0,
+            c2_valParam_3_0 == c2_valInput_0),
+    Implies(cur_locParam_3_0 == cur_locOutput,
+            c2_valParam_3_0 == c2_valOutput),
+    Implies(cur_locParam_3_0 == cur_locParam_0_0,
+            c2_valParam_3_0 == c2_valParam_0_0),
+    Implies(cur_locParam_3_0 == cur_locParam_0_1,
+            c2_valParam_3_0 == c2_valParam_0_1),
+    Implies(cur_locParam_3_0 == cur_locReturn_0,
+            c2_valParam_3_0 == c2_valReturn_0),
+    Implies(cur_locParam_3_0 == cur_locParam_1_0,
+            c2_valParam_3_0 == c2_valParam_1_0),
+    Implies(cur_locParam_3_0 == cur_locParam_1_1,
+            c2_valParam_3_0 == c2_valParam_1_1),
+    Implies(cur_locParam_3_0 == cur_locReturn_1,
+            c2_valParam_3_0 == c2_valReturn_1),
+    Implies(cur_locParam_3_0 == cur_locParam_2_0,
+            c2_valParam_3_0 == c2_valParam_2_0),
+    Implies(cur_locParam_3_0 == cur_locReturn_2,
+            c2_valParam_3_0 == c2_valReturn_2),
+    Implies(cur_locReturn_3 == cur_locInput_0,
+            c2_valReturn_3 == c2_valInput_0),
+    Implies(cur_locReturn_3 == cur_locOutput,
+            c2_valReturn_3 == c2_valOutput),
+    Implies(cur_locReturn_3 == cur_locParam_0_0,
+            c2_valReturn_3 == c2_valParam_0_0),
+    Implies(cur_locReturn_3 == cur_locParam_0_1,
+            c2_valReturn_3 == c2_valParam_0_1),
+    Implies(cur_locReturn_3 == cur_locReturn_0,
+            c2_valReturn_3 == c2_valReturn_0),
+    Implies(cur_locReturn_3 == cur_locParam_1_0,
+            c2_valReturn_3 == c2_valParam_1_0),
+    Implies(cur_locReturn_3 == cur_locParam_1_1,
+            c2_valReturn_3 == c2_valParam_1_1),
+    Implies(cur_locReturn_3 == cur_locReturn_1,
+            c2_valReturn_3 == c2_valReturn_1),
+    Implies(cur_locReturn_3 == cur_locParam_2_0,
+            c2_valReturn_3 == c2_valParam_2_0),
+    Implies(cur_locReturn_3 == cur_locReturn_2,
+            c2_valReturn_3 == c2_valReturn_2),
+    Implies(cur_locReturn_3 == cur_locParam_3_0,
+            c2_valReturn_3 == c2_valParam_3_0),
+    Implies(cur_locParam_4_0 == cur_locInput_0,
+            c2_valParam_4_0 == c2_valInput_0),
+    Implies(cur_locParam_4_0 == cur_locOutput,
+            c2_valParam_4_0 == c2_valOutput),
+    Implies(cur_locParam_4_0 == cur_locParam_0_0,
+            c2_valParam_4_0 == c2_valParam_0_0),
+    Implies(cur_locParam_4_0 == cur_locParam_0_1,
+            c2_valParam_4_0 == c2_valParam_0_1),
+    Implies(cur_locParam_4_0 == cur_locReturn_0,
+            c2_valParam_4_0 == c2_valReturn_0),
+    Implies(cur_locParam_4_0 == cur_locParam_1_0,
+            c2_valParam_4_0 == c2_valParam_1_0),
+    Implies(cur_locParam_4_0 == cur_locParam_1_1,
+            c2_valParam_4_0 == c2_valParam_1_1),
+    Implies(cur_locParam_4_0 == cur_locReturn_1,
+            c2_valParam_4_0 == c2_valReturn_1),
+    Implies(cur_locParam_4_0 == cur_locParam_2_0,
+            c2_valParam_4_0 == c2_valParam_2_0),
+    Implies(cur_locParam_4_0 == cur_locReturn_2,
+            c2_valParam_4_0 == c2_valReturn_2),
+    Implies(cur_locParam_4_0 == cur_locParam_3_0,
+            c2_valParam_4_0 == c2_valParam_3_0),
+    Implies(cur_locParam_4_0 == cur_locReturn_3,
+            c2_valParam_4_0 == c2_valReturn_3),
+    Implies(cur_locParam_4_1 == cur_locInput_0,
+            c2_valParam_4_1 == c2_valInput_0),
+    Implies(cur_locParam_4_1 == cur_locOutput,
+            c2_valParam_4_1 == c2_valOutput),
+    Implies(cur_locParam_4_1 == cur_locParam_0_0,
+            c2_valParam_4_1 == c2_valParam_0_0),
+    Implies(cur_locParam_4_1 == cur_locParam_0_1,
+            c2_valParam_4_1 == c2_valParam_0_1),
+    Implies(cur_locParam_4_1 == cur_locReturn_0,
+            c2_valParam_4_1 == c2_valReturn_0),
+    Implies(cur_locParam_4_1 == cur_locParam_1_0,
+            c2_valParam_4_1 == c2_valParam_1_0),
+    Implies(cur_locParam_4_1 == cur_locParam_1_1,
+            c2_valParam_4_1 == c2_valParam_1_1),
+    Implies(cur_locParam_4_1 == cur_locReturn_1,
+            c2_valParam_4_1 == c2_valReturn_1),
+    Implies(cur_locParam_4_1 == cur_locParam_2_0,
+            c2_valParam_4_1 == c2_valParam_2_0),
+    Implies(cur_locParam_4_1 == cur_locReturn_2,
+            c2_valParam_4_1 == c2_valReturn_2),
+    Implies(cur_locParam_4_1 == cur_locParam_3_0,
+            c2_valParam_4_1 == c2_valParam_3_0),
+    Implies(cur_locParam_4_1 == cur_locReturn_3,
+            c2_valParam_4_1 == c2_valReturn_3),
+    Implies(cur_locParam_4_1 == cur_locParam_4_0,
+            c2_valParam_4_1 == c2_valParam_4_0),
+    Implies(cur_locReturn_4 == cur_locInput_0,
+            c2_valReturn_4 == c2_valInput_0),
+    Implies(cur_locReturn_4 == cur_locOutput,
+            c2_valReturn_4 == c2_valOutput),
+    Implies(cur_locReturn_4 == cur_locParam_0_0,
+            c2_valReturn_4 == c2_valParam_0_0),
+    Implies(cur_locReturn_4 == cur_locParam_0_1,
+            c2_valReturn_4 == c2_valParam_0_1),
+    Implies(cur_locReturn_4 == cur_locReturn_0,
+            c2_valReturn_4 == c2_valReturn_0),
+    Implies(cur_locReturn_4 == cur_locParam_1_0,
+            c2_valReturn_4 == c2_valParam_1_0),
+    Implies(cur_locReturn_4 == cur_locParam_1_1,
+            c2_valReturn_4 == c2_valParam_1_1),
+    Implies(cur_locReturn_4 == cur_locReturn_1,
+            c2_valReturn_4 == c2_valReturn_1),
+    Implies(cur_locReturn_4 == cur_locParam_2_0,
+            c2_valReturn_4 == c2_valParam_2_0),
+...
+
+
+
+synthesizer adding spec:
+c2_valOutput == c2_valInput_0 | c2_valInput_0 + 1
+
+
+
+add new... to verifier:
+
+
+verifier adding new_cons:
+536936450 == c2_valInput_0
+> Running iteration 3 ...
+
+
+
+syn_model in iteration  3 :
+
+[c2_valParam_6_0 = 536936450,
+ c2_valReturn_6 = 3758030845,
+ cur_locReturn_1 = 5,
+ c0_valInput_0 = 0,
+ c1_valParam_1_1 = 2,
+ cur_locReturn_10 = 8,
+ c0_valParam_1_1 = 1,
+ c1_valReturn_9 = 0,
+ c1_valParam_10_0 = 1,
+ c0_valReturn_0 = 1,
+ cur_locParam_11_0 = 0,
+ c1_valReturn_4 = 0,
+ c0_valOutput = 1,
+ c0_valReturn_2 = 1,
+ c0_valParam_7_1 = 0,
+ c2_valReturn_2 = 536936451,
+ c0_valReturn_5 = 1,
+ c0_valReturn_4 = 0,
+ c2_valReturn_5 = 536936451,
+ c2_valReturn_10 = 4294967295,
+ c2_valParam_11_0 = 536936450,
+ c2_valParam_0_0 = 536936450,
+ c0_valParam_4_1 = 1,
+ cur_locReturn_4 = 4,
+ c1_valParam_0_1 = 2,
+ c1_valReturn_6 = 4294967294,
+ c1_valInput_0 = 1,
+ c0_valParam_8_0 = 0,
+ c2_valParam_10_1 = 0,
+ c1_valParam_1_0 = 0,
+ cur_locParam_0_1 = 2,
+ c1_valParam_5_0 = 2,
+ c1_valParam_6_0 = 1,
+ c0_valParam_10_0 = 0,
+ c0_valParam_11_0 = 0,
+ c0_valParam_0_0 = 0,
+ cur_locParam_5_0 = 2,
+ cur_locParam_10_0 = 0,
+ c0_valParam_9_0 = 1,
+ c2_valParam_4_1 = 536936451,
+ c2_valParam_9_0 = 536936451,
+ c1_valParam_2_0 = 1,
+ c2_valParam_10_0 = 536936450,
+ c0_valReturn_1 = 4294967295,
+ cur_locReturn_0 = 9,
+ cur_locReturn_2 = 2,
+ c0_valParam_2_0 = 0,
+ c0_valReturn_10 = 0,
+ c2_valParam_7_0 = 536936451,
+ c2_valReturn_4 = 0,
+ cur_locReturn_6 = 10,
+ c1_valReturn_10 = 4294967295,
+ cur_locReturn_5 = 7,
+ c0_valParam_7_0 = 1,
+ c1_valParam_11_0 = 1,
+ c2_valParam_4_0 = 0,
+ c1_valParam_11_1 = 1,
+ cur_locParam_2_0 = 0,
+ c1_valParam_3_0 = 2,
+ c0_valParam_10_1 = 0,
+ c1_valParam_10_1 = 0,
+ c2_valReturn_1 = 3758030845,
+ cur_locInput_0 = 0,
+ c1_valParam_4_0 = 0,
+ c2_valParam_1_0 = 0,
+ c2_valParam_8_0 = 536936450,
+ cur_locParam_1_1 = 3,
+ c2_valParam_3_0 = 536936451,
+ c2_valParam_5_1 = 536936450,
+ cur_locParam_0_0 = 0,
+ c2_valReturn_3 = 536936450,
+ c2_valReturn_8 = 0,
+ cur_locParam_5_1 = 0,
+ c0_valParam_3_0 = 1,
+ cur_locReturn_9 = 6,
+ c0_valParam_5_1 = 0,
+ c1_valParam_7_0 = 2,
+ c2_valReturn_0 = 1073872901,
+ c2_valInput_0 = 536936450,
+ c1_valParam_8_0 = 1,
+ c0_valReturn_3 = 0,
+ cur_locParam_7_1 = 1,
+ cur_locOutput = 7,
+ c0_valReturn_7 = 1,
+ c2_valReturn_7 = 536936451,
+ cur_locParam_10_1 = 6,
+ cur_locParam_11_1 = 0,
+ c2_valOutput = 536936451,
+ cur_locParam_4_1 = 3,
+ c0_valParam_4_0 = 0,
+ c0_valReturn_6 = 4294967295,
+ cur_locParam_3_0 = 3,
+ c1_valReturn_8 = 0,
+ cur_locParam_4_0 = 1,
+ c0_valReturn_9 = 0,
+ c1_valReturn_2 = 2,
+ c0_valParam_6_0 = 0,
+ c1_valReturn_11 = 4294967295,
+ cur_locParam_1_0 = 4,
+ cur_locParam_6_0 = 0,
+ cur_locReturn_11 = 11,
+ cur_locParam_9_0 = 2,
+ cur_locReturn_3 = 12,
+ c1_valReturn_5 = 3,
+ c1_valReturn_1 = 4294967294,
+ cur_locReturn_8 = 1,
+ c0_valParam_1_0 = 0,
+ c1_valParam_0_0 = 1,
+ c1_valReturn_3 = 1,
+ c2_valParam_7_1 = 0,
+ c1_valOutput = 3,
+ c2_valReturn_9 = 0,
+ c2_valParam_5_0 = 536936451,
+ c0_valParam_11_1 = 0,
+ cur_locParam_7_0 = 2,
+ c1_valParam_5_1 = 1,
+ cur_locParam_8_0 = 0,
+ c1_valParam_4_1 = 2,
+ c1_valParam_9_0 = 2,
+ c2_valReturn_11 = 4294967295,
+ c1_valParam_7_1 = 0,
+ c0_valReturn_8 = 0,
+ cur_locReturn_7 = 3,
+ c0_valParam_5_0 = 1,
+ c1_valReturn_0 = 3,
+ c1_valReturn_7 = 2,
+ c2_valParam_2_0 = 536936450,
+ c2_valParam_11_1 = 536936450,
+ c2_valParam_1_1 = 536936451,
+ ...]
+
+
+
+add lInput to verifier:
+0 == cur_locInput_0
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+0 == cur_locParam_0_0
+
+
+
+add lparams to verifier:
+2 == cur_locParam_0_1
+
+
+
+add lRet to verifier:
+9 == cur_locReturn_0
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+4 == cur_locParam_1_0
+
+
+
+add lparams to verifier:
+3 == cur_locParam_1_1
+
+
+
+add lRet to verifier:
+5 == cur_locReturn_1
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+0 == cur_locParam_2_0
+
+
+
+add lRet to verifier:
+2 == cur_locReturn_2
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+3 == cur_locParam_3_0
+
+
+
+add lRet to verifier:
+12 == cur_locReturn_3
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+1 == cur_locParam_4_0
+
+
+
+add lparams to verifier:
+3 == cur_locParam_4_1
+
+
+
+add lRet to verifier:
+4 == cur_locReturn_4
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+2 == cur_locParam_5_0
+
+
+
+add lparams to verifier:
+0 == cur_locParam_5_1
+
+
+
+add lRet to verifier:
+7 == cur_locReturn_5
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+0 == cur_locParam_6_0
+
+
+
+add lRet to verifier:
+10 == cur_locReturn_6
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+2 == cur_locParam_7_0
+
+
+
+add lparams to verifier:
+1 == cur_locParam_7_1
+
+
+
+add lRet to verifier:
+3 == cur_locReturn_7
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+0 == cur_locParam_8_0
+
+
+
+add lRet to verifier:
+1 == cur_locReturn_8
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+2 == cur_locParam_9_0
+
+
+
+add lRet to verifier:
+6 == cur_locReturn_9
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+0 == cur_locParam_10_0
+
+
+
+add lparams to verifier:
+6 == cur_locParam_10_1
+
+
+
+add lRet to verifier:
+8 == cur_locReturn_10
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+0 == cur_locParam_11_0
+
+
+
+add lparams to verifier:
+0 == cur_locParam_11_1
+
+
+
+add lRet to verifier:
+11 == cur_locReturn_11
+
+
+
+add lOutput to verifier:
+7 == cur_locOutput
+Current length = 2
+def f(x0):
+    v1 = x0 + 1
+    v6 = v1 | x0
+    return v6
+PS D:\2023-Spring\Synthesis\Project\python-brahma-master\python-brahma-master> 
