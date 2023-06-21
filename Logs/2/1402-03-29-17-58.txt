@@ -1,0 +1,692 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+
+PS D:\2023-Spring\Synthesis\Project\python-brahma-master\python-brahma-master>  & 'D:\ProgramFiles\Anaconda3\envs\P39\python.exe' 'c:\Users\meyssam\.vscode\extensions\ms-python.python-2023.10.1\pythonFiles\lib\python\debugpy\adapter/../..\debugpy\launcher' '5235' '--' 'd:\2023-Spring\Synthesis\Project\python-brahma-master\python-brahma-master\cli.py'
+Welcome to python-brahma. Type in a python function to specify the constraint.
+E.g., `lambda y, a, b: y == a + b`
+>>> lambda y, a: y == a | (a + 1)
+<function <lambda> at 0x000002302C0555E0>
+d:\2023-Spring\Synthesis\Project\python-brahma-master\python-brahma-master\cli.py:11: DeprecationWarning: inspect.getargspec() is deprecated since Python 3.0, use inspect.signature() or inspect.getfullargspec()
+  arity = len(inspect.getargspec(constraint)[0]) - 1
+
+
+
+synthesizer wfp_cons:
+And(And(cur_locParam_0_0 >= 0, cur_locParam_0_0 < 4),
+    And(cur_locParam_0_1 >= 0, cur_locParam_0_1 < 4),
+    And(cur_locReturn_0 >= 1, cur_locReturn_0 < 4),  
+    And(cur_locParam_1_0 >= 0, cur_locParam_1_0 < 4),
+    And(cur_locReturn_1 >= 1, cur_locReturn_1 < 4),  
+    And(cur_locParam_2_0 >= 0, cur_locParam_2_0 < 4),
+    And(cur_locParam_2_1 >= 0, cur_locParam_2_1 < 4),
+    And(cur_locReturn_2 >= 1, cur_locReturn_2 < 4),  
+    And(cur_locOutput >= 0, cur_locOutput < 4),      
+    cur_locInput_0 == 0,
+    cur_locReturn_1 != cur_locReturn_0,
+    cur_locReturn_2 != cur_locReturn_0,
+    cur_locReturn_2 != cur_locReturn_1,
+    cur_locParam_0_0 < cur_locReturn_0,
+    cur_locParam_0_1 < cur_locReturn_0,
+    cur_locParam_1_0 < cur_locReturn_1,
+    cur_locParam_2_0 < cur_locReturn_2,
+    cur_locParam_2_1 < cur_locReturn_2)
+
+
+
+synthesizer adding max_len:
+
+
+
+verifier adding conn_cons:
+And(Implies(cur_locOutput == cur_locInput_0,
+            ctr_valOutput == ctr_valInput_0),
+    Implies(cur_locParam_0_0 == cur_locInput_0,
+            ctr_valParam_0_0 == ctr_valInput_0),
+    Implies(cur_locParam_0_0 == cur_locOutput,
+            ctr_valParam_0_0 == ctr_valOutput),
+    Implies(cur_locParam_0_1 == cur_locInput_0,
+            ctr_valParam_0_1 == ctr_valInput_0),
+    Implies(cur_locParam_0_1 == cur_locOutput,
+            ctr_valParam_0_1 == ctr_valOutput),
+    Implies(cur_locParam_0_1 == cur_locParam_0_0,
+            ctr_valParam_0_1 == ctr_valParam_0_0),
+    Implies(cur_locReturn_0 == cur_locInput_0,
+            ctr_valReturn_0 == ctr_valInput_0),
+    Implies(cur_locReturn_0 == cur_locOutput,
+            ctr_valReturn_0 == ctr_valOutput),
+    Implies(cur_locReturn_0 == cur_locParam_0_0,
+            ctr_valReturn_0 == ctr_valParam_0_0),
+    Implies(cur_locReturn_0 == cur_locParam_0_1,
+            ctr_valReturn_0 == ctr_valParam_0_1),
+    Implies(cur_locParam_1_0 == cur_locInput_0,
+            ctr_valParam_1_0 == ctr_valInput_0),
+    Implies(cur_locParam_1_0 == cur_locOutput,
+            ctr_valParam_1_0 == ctr_valOutput),
+    Implies(cur_locParam_1_0 == cur_locParam_0_0,
+            ctr_valParam_1_0 == ctr_valParam_0_0),
+    Implies(cur_locParam_1_0 == cur_locParam_0_1,
+            ctr_valParam_1_0 == ctr_valParam_0_1),
+    Implies(cur_locParam_1_0 == cur_locReturn_0,
+            ctr_valParam_1_0 == ctr_valReturn_0),
+    Implies(cur_locReturn_1 == cur_locInput_0,
+            ctr_valReturn_1 == ctr_valInput_0),
+    Implies(cur_locReturn_1 == cur_locOutput,
+            ctr_valReturn_1 == ctr_valOutput),
+    Implies(cur_locReturn_1 == cur_locParam_0_0,
+            ctr_valReturn_1 == ctr_valParam_0_0),
+    Implies(cur_locReturn_1 == cur_locParam_0_1,
+            ctr_valReturn_1 == ctr_valParam_0_1),
+    Implies(cur_locReturn_1 == cur_locReturn_0,
+            ctr_valReturn_1 == ctr_valReturn_0),
+    Implies(cur_locReturn_1 == cur_locParam_1_0,
+            ctr_valReturn_1 == ctr_valParam_1_0),
+    Implies(cur_locParam_2_0 == cur_locInput_0,
+            ctr_valParam_2_0 == ctr_valInput_0),
+    Implies(cur_locParam_2_0 == cur_locOutput,
+            ctr_valParam_2_0 == ctr_valOutput),
+    Implies(cur_locParam_2_0 == cur_locParam_0_0,
+            ctr_valParam_2_0 == ctr_valParam_0_0),
+    Implies(cur_locParam_2_0 == cur_locParam_0_1,
+            ctr_valParam_2_0 == ctr_valParam_0_1),
+    Implies(cur_locParam_2_0 == cur_locReturn_0,
+            ctr_valParam_2_0 == ctr_valReturn_0),
+    Implies(cur_locParam_2_0 == cur_locParam_1_0,
+            ctr_valParam_2_0 == ctr_valParam_1_0),
+    Implies(cur_locParam_2_0 == cur_locReturn_1,
+            ctr_valParam_2_0 == ctr_valReturn_1),
+    Implies(cur_locParam_2_1 == cur_locInput_0,
+            ctr_valParam_2_1 == ctr_valInput_0),
+    Implies(cur_locParam_2_1 == cur_locOutput,
+            ctr_valParam_2_1 == ctr_valOutput),
+    Implies(cur_locParam_2_1 == cur_locParam_0_0,
+            ctr_valParam_2_1 == ctr_valParam_0_0),
+    Implies(cur_locParam_2_1 == cur_locParam_0_1,
+            ctr_valParam_2_1 == ctr_valParam_0_1),
+    Implies(cur_locParam_2_1 == cur_locReturn_0,
+            ctr_valParam_2_1 == ctr_valReturn_0),
+    Implies(cur_locParam_2_1 == cur_locParam_1_0,
+            ctr_valParam_2_1 == ctr_valParam_1_0),
+    Implies(cur_locParam_2_1 == cur_locReturn_1,
+            ctr_valParam_2_1 == ctr_valReturn_1),
+    Implies(cur_locParam_2_1 == cur_locParam_2_0,
+            ctr_valParam_2_1 == ctr_valParam_2_0),
+    Implies(cur_locReturn_2 == cur_locInput_0,
+            ctr_valReturn_2 == ctr_valInput_0),
+    Implies(cur_locReturn_2 == cur_locOutput,
+            ctr_valReturn_2 == ctr_valOutput),
+    Implies(cur_locReturn_2 == cur_locParam_0_0,
+            ctr_valReturn_2 == ctr_valParam_0_0),
+    Implies(cur_locReturn_2 == cur_locParam_0_1,
+            ctr_valReturn_2 == ctr_valParam_0_1),
+    Implies(cur_locReturn_2 == cur_locReturn_0,
+            ctr_valReturn_2 == ctr_valReturn_0),
+    Implies(cur_locReturn_2 == cur_locParam_1_0,
+            ctr_valReturn_2 == ctr_valParam_1_0),
+    Implies(cur_locReturn_2 == cur_locReturn_1,
+            ctr_valReturn_2 == ctr_valReturn_1),
+    Implies(cur_locReturn_2 == cur_locParam_2_0,
+            ctr_valReturn_2 == ctr_valParam_2_0),
+    Implies(cur_locReturn_2 == cur_locParam_2_1,
+            ctr_valReturn_2 == ctr_valParam_2_1))
+
+
+
+verifier adding lib_cons:
+And(ctr_valReturn_0 == ctr_valParam_0_0 + ctr_valParam_0_1,
+    ctr_valReturn_1 == ctr_valParam_1_0 + 1,
+    ctr_valReturn_2 == ctr_valParam_2_0 | ctr_valParam_2_1)
+
+
+
+verifier adding NOT spec:
+this is normal spec
+ctr_valOutput == ctr_valInput_0 | ctr_valInput_0 + 1
+> Running iteration 0 ...
+
+
+
+syn_model in iteration  0 :
+
+[cur_locParam_0_0 = 0,
+ cur_locOutput = 0,
+ cur_locParam_0_1 = 0,
+ cur_locReturn_0 = 1,
+ cur_locReturn_2 = 3,
+ cur_locParam_2_1 = 0,
+ cur_locParam_1_0 = 0,
+ cur_locReturn_1 = 2,
+ cur_locParam_2_0 = 0,
+ cur_locInput_0 = 0]
+
+
+
+add lInput to verifier:
+0 == cur_locInput_0
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+0 == cur_locParam_0_0
+
+
+
+add lparams to verifier:
+0 == cur_locParam_0_1
+
+
+
+add lRet to verifier:
+1 == cur_locReturn_0
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+0 == cur_locParam_1_0
+
+
+
+add lRet to verifier:
+2 == cur_locReturn_1
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+0 == cur_locParam_2_0
+
+
+
+add lparams to verifier:
+0 == cur_locParam_2_1
+
+
+
+add lRet to verifier:
+3 == cur_locReturn_2
+
+
+
+add lOutput to verifier:
+0 == cur_locOutput
+
+
+
+ver_model in iteration  0 :
+
+[cur_locOutput = 0,
+ ctr_valParam_0_0 = 2147483647,
+ cur_locParam_0_1 = 0,
+ ctr_valReturn_2 = 2147483647,
+ ctr_valParam_0_1 = 2147483647,
+ ctr_valInput_0 = 2147483647,
+ cur_locReturn_0 = 1,
+ cur_locInput_0 = 0,
+ ctr_valParam_2_0 = 2147483647,
+ cur_locReturn_2 = 3,
+ ctr_valReturn_0 = 4294967294,
+ cur_locReturn_1 = 2,
+ ctr_valReturn_1 = 2147483648,
+ cur_locParam_0_0 = 0,
+ ctr_valParam_1_0 = 2147483647,
+ ctr_valOutput = 2147483647,
+ ctr_valParam_2_1 = 2147483647,
+ cur_locParam_2_1 = 0,
+ cur_locParam_1_0 = 0,
+ cur_locParam_2_0 = 0]
+
+
+
+add lib_cons to synthesizer:
+And(c0_valReturn_0 == c0_valParam_0_0 + c0_valParam_0_1,
+    c0_valReturn_1 == c0_valParam_1_0 + 1,
+    c0_valReturn_2 == c0_valParam_2_0 | c0_valParam_2_1)
+
+
+
+add conn_cons to synthesizer:
+And(Implies(cur_locOutput == cur_locInput_0,
+            c0_valOutput == c0_valInput_0),
+    Implies(cur_locParam_0_0 == cur_locInput_0,
+            c0_valParam_0_0 == c0_valInput_0),
+    Implies(cur_locParam_0_0 == cur_locOutput,
+            c0_valParam_0_0 == c0_valOutput),
+    Implies(cur_locParam_0_1 == cur_locInput_0,
+            c0_valParam_0_1 == c0_valInput_0),
+    Implies(cur_locParam_0_1 == cur_locOutput,
+            c0_valParam_0_1 == c0_valOutput),
+    Implies(cur_locParam_0_1 == cur_locParam_0_0,
+            c0_valParam_0_1 == c0_valParam_0_0),
+    Implies(cur_locReturn_0 == cur_locInput_0,
+            c0_valReturn_0 == c0_valInput_0),
+    Implies(cur_locReturn_0 == cur_locOutput,
+            c0_valReturn_0 == c0_valOutput),
+    Implies(cur_locReturn_0 == cur_locParam_0_0,
+            c0_valReturn_0 == c0_valParam_0_0),
+    Implies(cur_locReturn_0 == cur_locParam_0_1,
+            c0_valReturn_0 == c0_valParam_0_1),
+    Implies(cur_locParam_1_0 == cur_locInput_0,
+            c0_valParam_1_0 == c0_valInput_0),
+    Implies(cur_locParam_1_0 == cur_locOutput,
+            c0_valParam_1_0 == c0_valOutput),
+    Implies(cur_locParam_1_0 == cur_locParam_0_0,
+            c0_valParam_1_0 == c0_valParam_0_0),
+    Implies(cur_locParam_1_0 == cur_locParam_0_1,
+            c0_valParam_1_0 == c0_valParam_0_1),
+    Implies(cur_locParam_1_0 == cur_locReturn_0,
+            c0_valParam_1_0 == c0_valReturn_0),
+    Implies(cur_locReturn_1 == cur_locInput_0,
+            c0_valReturn_1 == c0_valInput_0),
+    Implies(cur_locReturn_1 == cur_locOutput,
+            c0_valReturn_1 == c0_valOutput),
+    Implies(cur_locReturn_1 == cur_locParam_0_0,
+            c0_valReturn_1 == c0_valParam_0_0),
+    Implies(cur_locReturn_1 == cur_locParam_0_1,
+            c0_valReturn_1 == c0_valParam_0_1),
+    Implies(cur_locReturn_1 == cur_locReturn_0,
+            c0_valReturn_1 == c0_valReturn_0),
+    Implies(cur_locReturn_1 == cur_locParam_1_0,
+            c0_valReturn_1 == c0_valParam_1_0),
+    Implies(cur_locParam_2_0 == cur_locInput_0,
+            c0_valParam_2_0 == c0_valInput_0),
+    Implies(cur_locParam_2_0 == cur_locOutput,
+            c0_valParam_2_0 == c0_valOutput),
+    Implies(cur_locParam_2_0 == cur_locParam_0_0,
+            c0_valParam_2_0 == c0_valParam_0_0),
+    Implies(cur_locParam_2_0 == cur_locParam_0_1,
+            c0_valParam_2_0 == c0_valParam_0_1),
+    Implies(cur_locParam_2_0 == cur_locReturn_0,
+            c0_valParam_2_0 == c0_valReturn_0),
+    Implies(cur_locParam_2_0 == cur_locParam_1_0,
+            c0_valParam_2_0 == c0_valParam_1_0),
+    Implies(cur_locParam_2_0 == cur_locReturn_1,
+            c0_valParam_2_0 == c0_valReturn_1),
+    Implies(cur_locParam_2_1 == cur_locInput_0,
+            c0_valParam_2_1 == c0_valInput_0),
+    Implies(cur_locParam_2_1 == cur_locOutput,
+            c0_valParam_2_1 == c0_valOutput),
+    Implies(cur_locParam_2_1 == cur_locParam_0_0,
+            c0_valParam_2_1 == c0_valParam_0_0),
+    Implies(cur_locParam_2_1 == cur_locParam_0_1,
+            c0_valParam_2_1 == c0_valParam_0_1),
+    Implies(cur_locParam_2_1 == cur_locReturn_0,
+            c0_valParam_2_1 == c0_valReturn_0),
+    Implies(cur_locParam_2_1 == cur_locParam_1_0,
+            c0_valParam_2_1 == c0_valParam_1_0),
+    Implies(cur_locParam_2_1 == cur_locReturn_1,
+            c0_valParam_2_1 == c0_valReturn_1),
+    Implies(cur_locParam_2_1 == cur_locParam_2_0,
+            c0_valParam_2_1 == c0_valParam_2_0),
+    Implies(cur_locReturn_2 == cur_locInput_0,
+            c0_valReturn_2 == c0_valInput_0),
+    Implies(cur_locReturn_2 == cur_locOutput,
+            c0_valReturn_2 == c0_valOutput),
+    Implies(cur_locReturn_2 == cur_locParam_0_0,
+            c0_valReturn_2 == c0_valParam_0_0),
+    Implies(cur_locReturn_2 == cur_locParam_0_1,
+            c0_valReturn_2 == c0_valParam_0_1),
+    Implies(cur_locReturn_2 == cur_locReturn_0,
+            c0_valReturn_2 == c0_valReturn_0),
+    Implies(cur_locReturn_2 == cur_locParam_1_0,
+            c0_valReturn_2 == c0_valParam_1_0),
+    Implies(cur_locReturn_2 == cur_locReturn_1,
+            c0_valReturn_2 == c0_valReturn_1),
+    Implies(cur_locReturn_2 == cur_locParam_2_0,
+            c0_valReturn_2 == c0_valParam_2_0),
+    Implies(cur_locReturn_2 == cur_locParam_2_1,
+            c0_valReturn_2 == c0_valParam_2_1))
+
+
+
+synthesizer adding spec:
+c0_valOutput == c0_valInput_0 | c0_valInput_0 + 1
+
+
+
+add new... to verifier:
+
+
+verifier adding new_cons:
+2147483647 == c0_valInput_0
+> Running iteration 1 ...
+
+
+
+syn_model in iteration  1 :
+
+[cur_locOutput = 2,
+ c0_valReturn_1 = 4294967295,
+ c0_valParam_2_1 = 2147483647,
+ c0_valOutput = 4294967295,
+ cur_locParam_0_1 = 0,
+ c0_valReturn_2 = 4294967295,
+ c0_valParam_1_0 = 4294967294,
+ cur_locReturn_0 = 1,
+ cur_locReturn_2 = 3,
+ cur_locInput_0 = 0,
+ c0_valParam_2_0 = 4294967294,
+ cur_locReturn_1 = 2,
+ cur_locParam_0_0 = 0,
+ c0_valInput_0 = 2147483647,
+ c0_valParam_0_0 = 2147483647,
+ cur_locParam_2_1 = 0,
+ cur_locParam_1_0 = 1,
+ c0_valReturn_0 = 4294967294,
+ c0_valParam_0_1 = 2147483647,
+ cur_locParam_2_0 = 1]
+
+
+
+add lInput to verifier:
+0 == cur_locInput_0
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+0 == cur_locParam_0_0
+
+
+
+add lparams to verifier:
+0 == cur_locParam_0_1
+
+
+
+add lRet to verifier:
+1 == cur_locReturn_0
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+1 == cur_locParam_1_0
+
+
+
+add lRet to verifier:
+2 == cur_locReturn_1
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+1 == cur_locParam_2_0
+
+
+
+add lparams to verifier:
+0 == cur_locParam_2_1
+
+
+
+add lRet to verifier:
+3 == cur_locReturn_2
+
+
+
+add lOutput to verifier:
+2 == cur_locOutput
+
+
+
+ver_model in iteration  1 :
+
+[cur_locOutput = 2,
+ ctr_valParam_0_0 = 673186128,
+ cur_locParam_0_1 = 0,
+ ctr_valReturn_2 = 2019558384,
+ ctr_valParam_0_1 = 673186128,
+ ctr_valInput_0 = 673186128,
+ cur_locReturn_0 = 1,
+ cur_locInput_0 = 0,
+ ctr_valParam_2_0 = 1346372256,
+ cur_locReturn_2 = 3,
+ ctr_valReturn_0 = 1346372256,
+ cur_locReturn_1 = 2,
+ ctr_valReturn_1 = 1346372257,
+ cur_locParam_0_0 = 0,
+ ctr_valParam_1_0 = 1346372256,
+ ctr_valOutput = 1346372257,
+ ctr_valParam_2_1 = 673186128,
+ cur_locParam_2_1 = 0,
+ cur_locParam_1_0 = 1,
+ cur_locParam_2_0 = 1]
+
+
+
+add lib_cons to synthesizer:
+And(c1_valReturn_0 == c1_valParam_0_0 + c1_valParam_0_1,
+    c1_valReturn_1 == c1_valParam_1_0 + 1,
+    c1_valReturn_2 == c1_valParam_2_0 | c1_valParam_2_1)
+
+
+
+add conn_cons to synthesizer:
+And(Implies(cur_locOutput == cur_locInput_0,
+            c1_valOutput == c1_valInput_0),
+    Implies(cur_locParam_0_0 == cur_locInput_0,
+            c1_valParam_0_0 == c1_valInput_0),
+    Implies(cur_locParam_0_0 == cur_locOutput,
+            c1_valParam_0_0 == c1_valOutput),
+    Implies(cur_locParam_0_1 == cur_locInput_0,
+            c1_valParam_0_1 == c1_valInput_0),
+    Implies(cur_locParam_0_1 == cur_locOutput,
+            c1_valParam_0_1 == c1_valOutput),
+    Implies(cur_locParam_0_1 == cur_locParam_0_0,
+            c1_valParam_0_1 == c1_valParam_0_0),
+    Implies(cur_locReturn_0 == cur_locInput_0,
+            c1_valReturn_0 == c1_valInput_0),
+    Implies(cur_locReturn_0 == cur_locOutput,
+            c1_valReturn_0 == c1_valOutput),
+    Implies(cur_locReturn_0 == cur_locParam_0_0,
+            c1_valReturn_0 == c1_valParam_0_0),
+    Implies(cur_locReturn_0 == cur_locParam_0_1,
+            c1_valReturn_0 == c1_valParam_0_1),
+    Implies(cur_locParam_1_0 == cur_locInput_0,
+            c1_valParam_1_0 == c1_valInput_0),
+    Implies(cur_locParam_1_0 == cur_locOutput,
+            c1_valParam_1_0 == c1_valOutput),
+    Implies(cur_locParam_1_0 == cur_locParam_0_0,
+            c1_valParam_1_0 == c1_valParam_0_0),
+    Implies(cur_locParam_1_0 == cur_locParam_0_1,
+            c1_valParam_1_0 == c1_valParam_0_1),
+    Implies(cur_locParam_1_0 == cur_locReturn_0,
+            c1_valParam_1_0 == c1_valReturn_0),
+    Implies(cur_locReturn_1 == cur_locInput_0,
+            c1_valReturn_1 == c1_valInput_0),
+    Implies(cur_locReturn_1 == cur_locOutput,
+            c1_valReturn_1 == c1_valOutput),
+    Implies(cur_locReturn_1 == cur_locParam_0_0,
+            c1_valReturn_1 == c1_valParam_0_0),
+    Implies(cur_locReturn_1 == cur_locParam_0_1,
+            c1_valReturn_1 == c1_valParam_0_1),
+    Implies(cur_locReturn_1 == cur_locReturn_0,
+            c1_valReturn_1 == c1_valReturn_0),
+    Implies(cur_locReturn_1 == cur_locParam_1_0,
+            c1_valReturn_1 == c1_valParam_1_0),
+    Implies(cur_locParam_2_0 == cur_locInput_0,
+            c1_valParam_2_0 == c1_valInput_0),
+    Implies(cur_locParam_2_0 == cur_locOutput,
+            c1_valParam_2_0 == c1_valOutput),
+    Implies(cur_locParam_2_0 == cur_locParam_0_0,
+            c1_valParam_2_0 == c1_valParam_0_0),
+    Implies(cur_locParam_2_0 == cur_locParam_0_1,
+            c1_valParam_2_0 == c1_valParam_0_1),
+    Implies(cur_locParam_2_0 == cur_locReturn_0,
+            c1_valParam_2_0 == c1_valReturn_0),
+    Implies(cur_locParam_2_0 == cur_locParam_1_0,
+            c1_valParam_2_0 == c1_valParam_1_0),
+    Implies(cur_locParam_2_0 == cur_locReturn_1,
+            c1_valParam_2_0 == c1_valReturn_1),
+    Implies(cur_locParam_2_1 == cur_locInput_0,
+            c1_valParam_2_1 == c1_valInput_0),
+    Implies(cur_locParam_2_1 == cur_locOutput,
+            c1_valParam_2_1 == c1_valOutput),
+    Implies(cur_locParam_2_1 == cur_locParam_0_0,
+            c1_valParam_2_1 == c1_valParam_0_0),
+    Implies(cur_locParam_2_1 == cur_locParam_0_1,
+            c1_valParam_2_1 == c1_valParam_0_1),
+    Implies(cur_locParam_2_1 == cur_locReturn_0,
+            c1_valParam_2_1 == c1_valReturn_0),
+    Implies(cur_locParam_2_1 == cur_locParam_1_0,
+            c1_valParam_2_1 == c1_valParam_1_0),
+    Implies(cur_locParam_2_1 == cur_locReturn_1,
+            c1_valParam_2_1 == c1_valReturn_1),
+    Implies(cur_locParam_2_1 == cur_locParam_2_0,
+            c1_valParam_2_1 == c1_valParam_2_0),
+    Implies(cur_locReturn_2 == cur_locInput_0,
+            c1_valReturn_2 == c1_valInput_0),
+    Implies(cur_locReturn_2 == cur_locOutput,
+            c1_valReturn_2 == c1_valOutput),
+    Implies(cur_locReturn_2 == cur_locParam_0_0,
+            c1_valReturn_2 == c1_valParam_0_0),
+    Implies(cur_locReturn_2 == cur_locParam_0_1,
+            c1_valReturn_2 == c1_valParam_0_1),
+    Implies(cur_locReturn_2 == cur_locReturn_0,
+            c1_valReturn_2 == c1_valReturn_0),
+    Implies(cur_locReturn_2 == cur_locParam_1_0,
+            c1_valReturn_2 == c1_valParam_1_0),
+    Implies(cur_locReturn_2 == cur_locReturn_1,
+            c1_valReturn_2 == c1_valReturn_1),
+    Implies(cur_locReturn_2 == cur_locParam_2_0,
+            c1_valReturn_2 == c1_valParam_2_0),
+    Implies(cur_locReturn_2 == cur_locParam_2_1,
+            c1_valReturn_2 == c1_valParam_2_1))
+
+
+
+synthesizer adding spec:
+c1_valOutput == c1_valInput_0 | c1_valInput_0 + 1
+
+
+
+add new... to verifier:
+
+
+verifier adding new_cons:
+673186128 == c1_valInput_0
+> Running iteration 2 ...
+
+
+
+syn_model in iteration  2 :
+
+[c1_valInput_0 = 673186128,
+ c0_valParam_2_1 = 2147483647,
+ c1_valReturn_1 = 673186129,
+ c1_valParam_1_0 = 673186128,
+ cur_locParam_0_1 = 0,
+ c0_valParam_1_0 = 2147483647,
+ c1_valParam_0_0 = 673186128,
+ cur_locInput_0 = 0,
+ cur_locReturn_1 = 2,
+ c1_valOutput = 673186129,
+ cur_locParam_0_0 = 0,
+ c0_valInput_0 = 2147483647,
+ c0_valParam_0_0 = 2147483647,
+ c1_valParam_2_0 = 673186129,
+ c0_valReturn_0 = 4294967294,
+ c0_valReturn_1 = 2147483648,
+ cur_locOutput = 3,
+ c0_valOutput = 4294967295,
+ c0_valReturn_2 = 4294967295,
+ c1_valParam_2_1 = 673186128,
+ cur_locReturn_0 = 1,
+ cur_locReturn_2 = 3,
+ c0_valParam_2_0 = 2147483648,
+ c1_valReturn_0 = 1346372256,
+ c1_valReturn_2 = 673186129,
+ cur_locParam_2_1 = 0,
+ cur_locParam_1_0 = 0,
+ c1_valParam_0_1 = 673186128,
+ c0_valParam_0_1 = 2147483647,
+ cur_locParam_2_0 = 2]
+
+
+
+add lInput to verifier:
+0 == cur_locInput_0
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+0 == cur_locParam_0_0
+
+
+
+add lparams to verifier:
+0 == cur_locParam_0_1
+
+
+
+add lRet to verifier:
+1 == cur_locReturn_0
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+0 == cur_locParam_1_0
+
+
+
+add lRet to verifier:
+2 == cur_locReturn_1
+
+
+
+add new... to verifier:
+
+
+
+add lparams to verifier:
+2 == cur_locParam_2_0
+
+
+
+add lparams to verifier:
+0 == cur_locParam_2_1
+
+
+
+add lRet to verifier:
+3 == cur_locReturn_2
+
+
+
+add lOutput to verifier:
+3 == cur_locOutput
+Current length = 2
+def f(x0):
+    v1 = x0 + 1
+    v2 = v1 | x0
+    return v2
+PS D:\2023-Spring\Synthesis\Project\python-brahma-master\python-brahma-master> 
