@@ -16,11 +16,11 @@
 
 9 -  lambda y, x : y == ((x ^ (x >> 31)) - (x >> 31))
 
-10 -  lambda y, z, x : y == (-1 if (x ^ z) <= (x & z) else 0)
+10 -  lambda y, z, x : y == If(ULE(x ^ z, x & z), (x | ~x), (x & ~x))
 
-11 -  lambda y, z, x : y == (-1 if (x & ~z) > z else 0)
+11 -  lambda y, z, x : y == If(UGT(x & ~z, z), (x | ~x), (x & ~x))
 
-12 -  lambda y, z, x : y == (-1 if (x & ~z) <= z else 0)
+12 -  lambda y, z, x : y == If(ULE(x & ~z, z), (x | ~x), (x & ~x))
 
 13 -  lambda y, x : y == ((x >> 31) | (~x >> 31))
 
@@ -28,7 +28,7 @@
 
 15 -  lambda y, z, x : y == ((x | z) - ((x ^ z) >> 1))
 
-16 -  lambda y, z, x : y == (((x ^ z) & (~(-1 if x >= z else 0) + 1)) ^ z)
+16 -  lambda y, z, x : y == (((x ^ z) & (~(If(UGE(x, z), (x | ~x), (x & ~x))) + 1)) ^ z)
 
 17 -  lambda y, x : y == (((x | (x - 1)) + 1) & x)
 
