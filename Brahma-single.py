@@ -475,18 +475,7 @@ class Program:
             instrs[lRetVal - nInput] = Instruction(comp, lParamVals)
         self.instructions = instrs
         
-        '''
-        Dead Code Removal
-
-        3   Problem Definition
-        
-        >   We note that the implementation above is using *all* components
-        > from the library. We can assume this without any loss of generality.
-        > Even when there is a correct implementation using fewer components,
-        > that implementation can always be extended to an implementation that
-        > uses all components by adding dead code. Dead code can be easily
-        > identified and removed in a post-processing step.
-        '''
+    
         def visiting(ident: int) -> None:
             if ident < nInput: return
             instr = instrs[ident - nInput]
